@@ -1,0 +1,89 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+.hero{
+padding: 4vh;
+margin: 2vh;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 60vh;
+width: 70vw;
+background: rgba( 2, 232, 183, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 16px );
+-webkit-backdrop-filter: blur( 18px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+z-index: 9;
+
+
+}
+
+.textHero{
+    color: #FFF;
+    font-size: 25px;
+}
+
+.bgHero{
+width: 100vw;
+height: 100vh;
+position: absolute;
+overflow: hidden;
+    
+}
+
+
+h1{
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+
+.buttonHero{
+    background-color: #04045a;
+    padding: 1vh;
+    text-align: center;
+    border-radius: 10px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15vw;
+    cursor: pointer;
+}
+
+.buttonHero:hover{
+    background-color: #04045ac9;
+}
+
+.ticket{
+    width: 80%;
+    height: 80%;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.562);
+    transform: rotate(10deg);
+    border-radius: 10px;
+}
+
+.rightHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30vw;
+}
+
+.leftHero{
+    width: 30vw;
+}

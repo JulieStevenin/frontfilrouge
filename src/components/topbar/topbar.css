@@ -1,0 +1,65 @@
+
+.header{
+
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #02e8b7;
+    gap : 3vw;
+
+}
+
+.inscription{
+    padding: 1vh;
+    background-color: #04045a;
+    text-transform: uppercase;
+    color:#FFF;
+    margin-right: 3vh;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inscription:hover{
+    background-color: #04045ac9;
+}
+
+.connexion{
+    padding: 1vh;
+    background-color: #04045a;
+    text-transform: uppercase;
+    color:#FFF;
+    margin-right: 3vh;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.connexion:hover{
+    background-color: #04045ac9;
+}
+
+.logo{
+   display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vh;
+    font-weight: 800;
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.buttonUser{
+    display: flex;
+    width: fit-content;
+}
+
+.searchHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 1px solid azure;
+}

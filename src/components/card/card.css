@@ -1,0 +1,57 @@
+
+.cardAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    height: fit-content;
+    width: 100vw;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+    background-color: #02e8b7 ;
+    height: 50vh;
+    width: 20vw;
+    border-radius: 10px;
+    font-size: 50px;
+    color: #FFF;
+    box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.562);
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.card:hover{
+    background-color: #04045a;
+}
+
+.infoCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: medium;
+   
+}
+
+.imgCard{
+    width: 40%;
+    height: 30%;
+    border-radius: 10px;
+}
+
+
+.TitreAPI{
+    text-align: center;
+    color: #04045a;
+    font-weight: 500;
+
+}
