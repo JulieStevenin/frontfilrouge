@@ -6,17 +6,17 @@ function Hero (){
 
     return(
      
-       <div className="container">
-        <img className="bgHero" src="bgimage.jpg"></img>
+       <div className="mainHero">
         <div className="hero">
-        <div className='leftHero'>
-        <h1 className='promesse'>Achetez, revendez vos billets </h1>
-        <p className='textHero'>Bienvenue sur Projet File rouge, partagez des moments uniques au meilleur prix.</p>
-        <div className='buttonHero'> Inscription</div>
+        <div className="bubbleHero">N°1 de la revente culturelle</div>
+        <h1 className='promesse'>Achetez, revendez<br/> vos billets</h1>
+        <p className='textHero'>Partagez la culture au prix juste</p>
+        <div className="allButtonHero">
+        <div className='buttonHero'> Achetez</div>
+        <div className='buttonHero'> Revendez</div>
         </div>
-        <div className='rightHero'>
-        <img className="ticket" src="Ticket.png"></img>
         </div>
+        <div className="imgHero"><img className='bghero' src="bghero.png"></img>  
         </div>
         </div>
    

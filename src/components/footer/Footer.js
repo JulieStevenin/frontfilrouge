@@ -7,10 +7,19 @@ function Footer(){
     return(
 
         <div className="footer">
+            <div>
+            <h1 className='hFooter'>Merci d'avoir consulter notre travail</h1>
+            <p className="ftext2">Il a été réalisé avec ❤️</p>
+            </div>
+        <div className="mainFooter">
+          <h2 className="btext">Les technologies utilisées</h2>
+        <p className="ftext">Ce site utilise React, Spring Boot et CSS3.</p>
+         </div>
 
-        <p className="btext">Projet test pour le fil rouge</p>
-    <p className="ftext">Ce site utilise React et Spring Boot</p>
-
+         <div className="mainFooter">
+            <h2 className="btext">Les développeurs</h2>
+        <p className="ftext">Safa Elouaer, Julie Stévenin et Arnaud Guiovanna.</p>
+         </div>
         </div>
 
 

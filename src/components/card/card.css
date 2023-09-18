@@ -1,3 +1,24 @@
+.mainCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    background-color: #350b59;
+    border-top-left-radius: 4vw ;
+    border-top-right-radius: 4vw ;
+    padding: 5vh;
+
+}
+
+.TitreAPI{
+    text-align: center;
+    text-transform: uppercase;
+    color: #feffc3;
+    font-weight: 700;
+    font-size: clamp(20px,6vw,50px);
+}
+
 
 .cardAll{
     display: flex;
@@ -6,52 +27,87 @@
     flex-direction: row;
     flex-wrap:wrap;
     height: fit-content;
-    width: 100vw;
+    max-width: 80vw;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin: auto;
 }
 
 
 .card{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 2vh;
-    background-color: #02e8b7 ;
-    height: 50vh;
-    width: 20vw;
-    border-radius: 10px;
-    font-size: 50px;
-    color: #FFF;
-    box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.562);
+    height: 15vh;
+    width: clamp(500px,5vw,400px);
+    border-radius: 5px;
+    font-size: clamp(12px,5vw,30px);
+    color: #feffc3;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+    }
 
+    .card:hover{
+        color: #c81c47;
+        background-color: #FFF;
+    }
+
+
+.textCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+   
 }
 
-.card:hover{
-    background-color: #04045a;
-}
 
 .infoCard{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000;
-    font-size: medium;
+    color: #c81c47;
+    font-weight: 700;
+    font-size: clamp(5px,2vw,10px);
    
 }
 
+.pictureCard{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
 .imgCard{
-    width: 40%;
-    height: 30%;
     border-radius: 10px;
+    object-fit: cover;
+}
+
+.buttonCard{
+    padding: 1vh;
+    color: #feffc3;
+    border: 2px solid #feffc3;
+    border-radius: 30px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.buttonCard:hover{
+    background-color: #feffc3;
+    color: #1f1d40;
 }
 
 
-.TitreAPI{
-    text-align: center;
-    color: #04045a;
-    font-weight: 500;
 
-}
+
+

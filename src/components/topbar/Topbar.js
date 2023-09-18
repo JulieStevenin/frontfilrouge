@@ -5,10 +5,10 @@ function Topbar(){
 return(
 
 <div className="header">
-    <div className="logo"> Projet Fil Rouge</div>
+<Link to="/" activeClassName="active">  <div className="logo">KORO</div></Link>
     <input className ="searchHeader" placeholder="Recherchez par date ou événement" type="search"/>
     <div className="buttonUser">
-    <p className="inscription"><Link to="/Inscription" activeClassName="active">Inscription</Link></p>
+    <Link to="/Inscription" activeClassName="active"> <p className="inscription">Inscription</p></Link>
     <p className="connexion">connexion</p>
     </div>
 </div>

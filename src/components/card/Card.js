@@ -8,7 +8,7 @@ function Card (){
     
     useEffect(()=>{ 
         
-    fetch('https://randomuser.me/api/?results=5') 
+    fetch('https://randomuser.me/api/?results=6') 
     .then(response => response.json()) 
     .then(json => json.results)
     .then(users => {
@@ -22,13 +22,15 @@ function Card (){
       
 return(
 <>
-<h1 className='TitreAPI'>Test API TUTO USER</h1>
+<div className="mainCard">
+<h1 className='TitreAPI'>Les billets en vente</h1>
 
 
 <div className='cardAll'>
-{users.map((user)=>(<div className="card"><img src={user.picture.medium}  className='imgCard'></img><p className='infoCard'>Billet vendu par {user.name.first}:</p> Artiste : {user.gender}</div>))}
+{users.map((user)=>(<div className="card"><div className='pictureCard'><img src={user.picture.medium}  className='imgCard'></img></div> <div className="textCard"> Artiste : {user.gender}<p className='infoCard'> Vendeur : {user.name.first}</p></div></div>))}
 </div>
-
+<div className="buttonCard">En voir plus</div>
+</div>
 </>
 );
 }

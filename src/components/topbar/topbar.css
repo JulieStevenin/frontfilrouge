@@ -1,65 +1,88 @@
+::placeholder{
+    color:#000;
+    opacity: 40%;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: clamp(5px,2vw,20px);
+}
+
 
 .header{
 
     display: flex;
-    width: 100vw;
-    justify-content: space-between;
+    max-width: 90vw;
+    justify-content: space-around;
     align-items: center;
-    background-color: #02e8b7;
-    gap : 3vw;
+    background-color: #d62451;
+    gap : 2vw;
+    font-size: clamp(5px,2vw,15px);
+    margin:auto;
+    border-radius: 10px;
 
 }
 
 .inscription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1vh;
-    background-color: #04045a;
+    background-color: #feffc3;
     text-transform: uppercase;
-    color:#FFF;
-    margin-right: 3vh;
+    color:#d62451;
+    font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .inscription:hover{
     background-color: #04045ac9;
+    color:#feffc3;
 }
 
 .connexion{
-    padding: 1vh;
-    background-color: #04045a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #feffc3;
     text-transform: uppercase;
-    color:#FFF;
-    margin-right: 3vh;
+    color:#d62451;
+    font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
-    
+    font-size: clamp(5px,2vw,15px);
+    transition: background-color 0.3s ease;
 }
 
 .connexion:hover{
     background-color: #04045ac9;
+    color:#feffc3;
 }
 
 .logo{
    display: flex; 
     justify-content: center;
     align-items: center;
-    margin-left: 3vh;
     font-weight: 800;
-    font-size: larger;
+    font-size: clamp(5px,2vw,25px);
     text-transform: uppercase;
+    color: #feffc3;
 }
 
 .buttonUser{
     display: flex;
     width: fit-content;
+    gap:2vw;
 }
 
 .searchHeader{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60vw;
-    height: 5vh;
+    background-color:#feffc3;
+    width: 40vw;
+    height: 4vh;
     border-radius: 10px;
-    border: 1px solid azure;
+    border:none;
 }

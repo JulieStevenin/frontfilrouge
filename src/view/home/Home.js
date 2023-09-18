@@ -1,5 +1,7 @@
 import Hero from "../../components/hero/Hero";
 import Card from "../../components/card/Card";
+import SectionApp from "../../components/section/SectionApp";
+
 
 function Home(){
 
@@ -8,7 +10,7 @@ function Home(){
 <>
 <Hero></Hero>
 <Card></Card>
-
+<SectionApp></SectionApp>
 </>
 
     );

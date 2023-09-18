@@ -1,89 +1,108 @@
-.container{
+.mainHero{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    margin: 0;
+    height: 90vh;
+    width: 90vw;
+    margin: auto;
     padding: 0;
-
+    font-size: clamp(5px,2vw,20px);
 }
 
 
 
 .hero{
-padding: 4vh;
+padding: 2vh;
 margin: 2vh;
 display: flex;
+flex-direction: column;
 justify-content: space-around;
 align-items: center;
-height: 60vh;
-width: 70vw;
-background: rgba( 2, 232, 183, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 16px );
--webkit-backdrop-filter: blur( 18px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-z-index: 9;
+width: 60%;
+flex-wrap: wrap;
+min-height: 30vh;
+font-size: clamp(15px,5vw,30px);
+gap:2vh;
+text-align: center;
+}
 
+.imgHero{
+    display: flex;
+    align-items: center;
+    gap:2vh;
+    width: 30%;
+    z-index: -1;
+}
 
+.bghero{
+    background-color:#feffc3;
+    border-radius: 100px;
+    width: 90%;
+    object-fit: cover;
+    box-shadow: 5px 5px #350b59;
 }
 
 .textHero{
+    margin: 0;
     color: #FFF;
-    font-size: 25px;
+    font-weight: 600;
 }
 
-.bgHero{
-width: 100vw;
-height: 100vh;
-position: absolute;
-overflow: hidden;
-    
-}
-
-
-h1{
-    color: #FFF;
-    font-size: 60px;
-    font-weight: 900;
-}
-
-
-.buttonHero{
-    background-color: #04045a;
+.bubbleHero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #feffc3;
+    background-color: #350b59;
+    border-radius: 200px;
+    height: 5vh;
+    font-size: large;
+    width: 10vw;
     padding: 1vh;
     text-align: center;
-    border-radius: 10px;
-    color: #FFF;
+    font-size: clamp(5px,2vw,20px);;
+
+}
+
+.promesse{
+    width: 100%;
+    margin: 0;
+    color: #feffc3;
+    font-weight: 900;
+    font-size: clamp(30px,4vw,60px);
+}
+
+
+.allButtonHero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5vw;
+}
+
+.buttonHero{
+    border: 2px solid #feffc3;
+    padding: 2vh;
+    text-align: center;
+    border-radius: 5vw;
+    color: #feffc3;
     font-weight: bold;
     text-transform: uppercase;
-    width: 15vw;
+    width: fit-content;
     cursor: pointer;
+    font-size: clamp(8px,3vw,20px);
 }
 
 .buttonHero:hover{
     background-color: #04045ac9;
 }
 
-.ticket{
-    width: 80%;
-    height: 80%;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.562);
-    transform: rotate(10deg);
-    border-radius: 10px;
-}
 
-.rightHero{
+
+.blocHero{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 30vw;
-}
-
-.leftHero{
-    width: 30vw;
+    
 }
