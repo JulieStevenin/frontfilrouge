@@ -6,11 +6,12 @@
     min-height: 90vh;
     width: 90vw;
     margin: auto;   
-    padding: 2vh;
-    gap:5vh;
+    padding: 1vh;
+    gap:2vh;
 }
 
 .titleRegister{
+    text-align: center;
     font-size: clamp(25px,5vw,50px);
     color:#feffc3;
     text-transform: uppercase;
@@ -25,11 +26,12 @@
     justify-content: center;
     align-items: center;
     min-width: 15vw;
+    
 }
 
 .subRegister{
 text-align: center;
-    font-size: clamp(12px,5vw,20px);
+    font-size: clamp(12px,3vw,20px);
     margin: 0;
     padding: 0;
     color: #fFF;

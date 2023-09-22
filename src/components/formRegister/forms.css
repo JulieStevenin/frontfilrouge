@@ -8,27 +8,33 @@
     padding: 5vh;
     border-radius: 20px;
     box-shadow: 5px 5px #feffc3;
-    width: 70vw;
+    width: 50vw;
 
 }
 
 .inputRegister{
 border: none;
 background-color:#fFF;
-min-width: 60vw;
+min-width: 40vw;
 border-radius: 10px;
 height: 5vh;
 color:#350b59;
 font-weight: 600;
-font-size: clamp(12px,3vw,20px);;
+font-size: 12px;
 }
 
 .custom-file-upload {
-    padding: 6px 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
     cursor: pointer;
     background-color: #feffc3;
     color: #350b59;
     border: none;
+    height: 5vh;
+    width: 20vw;
+    font-size: clamp(12px,3vw,20px);;
+    font-weight: 600;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
@@ -52,6 +58,7 @@ color:#350b59;
 font-weight: 600;
 font-size: clamp(12px,3vw,20px);;
 transition: background-color 0.3s ease;
+cursor: pointer;
 }
 
 .submitRegister:hover{

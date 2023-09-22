@@ -5,11 +5,10 @@
     align-items: center; 
     width: 100vw;
     background-color: #feffc3;
-    height: 50vh;
+    min-height: 40vh;
     gap:2vh;
    padding: 1vh;
    font-size: clamp(15px,2vw,30px);
-      
 }
 
 .mainFooter{
@@ -18,16 +17,17 @@
     justify-content: center;
     align-items: center;
     background-color: #350b59;
-    width: 40vw;
-    border-radius: 2vw;
+    width: 35vw;
+    border-radius: 10px;
     height: 10vh;
+    
 }
 
 .btext{
     margin: 0;
     text-align: center;
     color: #feffc3;
-    font-size: clamp(10px,2vw,10px);
+    font-size: clamp(10px,2vw,15px);
     border-radius: 5px;
 }
 

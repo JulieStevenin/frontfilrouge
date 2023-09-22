@@ -1,13 +1,21 @@
+.bg{
+    background-color: #feffc3;;
+    display: flex;
+    justify-content: center;
+}
+
+
 .mainCard{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100vw;
+    width: 100vw;
     background-color: #350b59;
     border-top-left-radius: 4vw ;
     border-top-right-radius: 4vw ;
-    padding: 5vh;
+    padding: 1vh;
+    margin: auto;
 
 }
 

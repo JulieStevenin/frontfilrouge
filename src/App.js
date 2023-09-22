@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer';
 import {Routes, Route} from 'react-router-dom';
 import Inscription from './view/register/register';
 import Home from './view/home/Home';
+import Account from './view/account/Account';
 
 function App() {
 
@@ -11,19 +12,21 @@ function App() {
 
 
   return (
-  <>
+
+  <div className="app-wrapper">
   <Topbar/>
     <Routes>
           <Route path="/" >
             <Route index element={<Home/>} />
             <Route path="/login" element={<div />} />
             <Route path="/Inscription" element={<Inscription />} />
-            <Route path="/*" element={<div />} />
+            <Route path="/Account" element={<Account />} />
+
           </Route>
         </Routes>
-<Footer/>
-
-   </>
+<Footer className="footer"/>
+</div>
+   
   );
 }
 

@@ -22,6 +22,7 @@ function Card (){
       
 return(
 <>
+<div className="bg">
 <div className="mainCard">
 <h1 className='TitreAPI'>Les billets en vente</h1>
 
@@ -30,6 +31,7 @@ return(
 {users.map((user)=>(<div className="card"><div className='pictureCard'><img src={user.picture.medium}  className='imgCard'></img></div> <div className="textCard"> Artiste : {user.gender}<p className='infoCard'> Vendeur : {user.name.first}</p></div></div>))}
 </div>
 <div className="buttonCard">En voir plus</div>
+</div>
 </div>
 </>
 );

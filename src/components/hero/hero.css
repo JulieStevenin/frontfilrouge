@@ -1,25 +1,24 @@
 .mainHero{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 65vh;
     width: 90vw;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
-    font-size: clamp(5px,2vw,20px);
+    gap:1vh;
+
 }
 
 
 
 .hero{
-padding: 2vh;
-margin: 2vh;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
 width: 60%;
-flex-wrap: wrap;
 min-height: 30vh;
 font-size: clamp(15px,5vw,30px);
 gap:2vh;
@@ -28,18 +27,19 @@ text-align: center;
 
 .imgHero{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap:2vh;
     width: 30%;
     z-index: -1;
 }
 
 .bghero{
     background-color:#feffc3;
-    border-radius: 100px;
-    width: 90%;
-    object-fit: cover;
     box-shadow: 5px 5px #350b59;
+    border-radius: 10px;
+    width: 60%;
+    object-fit: cover;
+  
 }
 
 .textHero{
@@ -54,8 +54,8 @@ text-align: center;
     align-items: center;
     color: #feffc3;
     background-color: #350b59;
-    border-radius: 200px;
-    height: 5vh;
+    border-radius: 100px;
+    height: fit-content;
     font-size: large;
     width: 10vw;
     padding: 1vh;
