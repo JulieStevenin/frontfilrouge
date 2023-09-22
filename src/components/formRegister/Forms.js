@@ -7,8 +7,7 @@ function Forms(){
           fname: '',
           lname: '',
           mail: '',
-          password: '',
-          photo:'',
+          password: ''
         });
       
         const handleInputChange = (e) => {
@@ -62,10 +61,7 @@ function Forms(){
 
                 <input type="password" className="inputRegister" name="password" placeholder="Password"
                 value={formData.password} onChange={handleInputChange}></input>
-
-                <label className="custom-file-upload">
-                <input type="file" className="fRegister" name="photo" value={formData.photo} onChange={handleInputChange}/>Photo</label>
-    
+                
                 <input type="submit" className="submitRegister" ></input>
             </form>
 

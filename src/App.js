@@ -5,6 +5,7 @@ import {Routes, Route} from 'react-router-dom';
 import Inscription from './view/register/register';
 import Home from './view/home/Home';
 import Account from './view/account/Account';
+import Login from './view/login/Login';
 
 function App() {
 
@@ -18,9 +19,10 @@ function App() {
     <Routes>
           <Route path="/" >
             <Route index element={<Home/>} />
-            <Route path="/login" element={<div />} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/Inscription" element={<Inscription />} />
             <Route path="/Account" element={<Account />} />
+            
 
           </Route>
         </Routes>
