@@ -13,12 +13,12 @@ function Footer(){
             </div>
         <div className="mainFooter">
           <h2 className="btext">Les technologies utilisées</h2>
-        <p className="ftext">Ce site utilise React, Spring Boot et CSS3.</p>
+        <p className="ftext">React, Spring Boot et CSS3.</p>
          </div>
 
          <div className="mainFooter">
             <h2 className="btext">Les développeurs</h2>
-        <p className="ftext">Safa Elouaer, Julie Stévenin et Arnaud Guiovanna.</p>
+        <p className="ftext">Safa Elouaer, Julie Stévenin et Arnaud <br/>Guiovanna.</p>
          </div>
         </div>
 

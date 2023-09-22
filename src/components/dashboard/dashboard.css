@@ -1,0 +1,68 @@
+.mainDB{
+    
+    gap:2vh;
+}
+
+
+.menuDB{
+display: flex;
+justify-content: space-around;
+align-items: center;    
+min-height: 20vw;
+color: #d62451;
+font-weight: 500;
+text-transform: uppercase;
+padding: 2vh;
+}
+
+.catDash{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: clamp(50px,7vw,250px);
+    width: clamp(50px,7vw,250px);
+    background-color:#feffc3;
+    border-radius: 10px;
+    box-shadow: 5px 5px #000 ;
+    cursor: pointer;
+    transition: 0.2s all;
+    font-size: clamp(5px,2vw,20px);
+}
+
+.catDash:active{
+    transform: scale(0.98);
+    box-shadow: 2px 2px #350b59;
+}
+
+.space{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+     align-items: flex-start;
+    background-color: #FFf;
+    width: 100vw;
+    min-height: 60vh;
+
+}
+
+.onglet{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-transform: uppercase;
+    padding: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    height: 100%;
+    
+}
+
+.textSec{
+    background-color: #d62451;
+    border-radius: 5px;
+    color: #FFf;
+    padding: 1vh;
+}
