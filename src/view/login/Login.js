@@ -2,9 +2,7 @@ function Login(){
 
     return(<>
     
-    <div className="mainLogin">
-        dsfsfsdfsdfdsfsdfsdfsdfsdf
-    </div>
+<composantTicket/>
     
     </>);
 }
