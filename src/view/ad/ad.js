@@ -1,7 +1,6 @@
-function ad(){
+function Ad(){
 
-    return(
-
-        
-    );
+    return
 }
+
+export default Ad;

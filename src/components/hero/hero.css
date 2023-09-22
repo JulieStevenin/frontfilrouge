@@ -55,7 +55,7 @@ text-align: center;
     color: #feffc3;
     background-color: #350b59;
     border-radius: 200px;
-    height: 5vh;
+    height: fit-content;
     font-size: large;
     width: 10vw;
     padding: 1vh;
