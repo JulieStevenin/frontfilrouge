@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    flex-direction:row;
+    margin : auto;
+}
+
+
+.mainTicket{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 90vw;
+    margin: auto;   
+    padding: 2vh;
+    gap:5vh;
+}
+
+
+.mainTicket{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 90vw;
+    margin: auto;   
+    padding: 2vh;
+    gap:5vh;
+}
+
+.titleTicket{
+    font-size: clamp(25px,5vw,50px);
+    color:#feffc3;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+
+}
+
+.textTicket{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 15vw;
+}
+
+.subTicket{
+text-align: center;
+    font-size: clamp(12px,5vw,20px);
+    margin: 0;
+    padding: 0;
+    color: #fFF;
+    font-weight: 600;
+}
