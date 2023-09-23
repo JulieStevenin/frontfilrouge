@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './dashboard.css'
 import { Icon } from '@iconify/react';
-
-
+import axios from 'axios';
+import Ad from '../../view/ad/ad'
 function Dashboard(){
 
     const[profil, setProfil] =useState(true);
@@ -17,7 +17,57 @@ function Dashboard(){
         setVentes(name === 'ventes');
         setAnnonces(name === 'annonces');
       }
+     const [adData, setAdData] = useState({
+        name: '',
+       date: '',
+       category:'',
+       city:'',
+     
+      });
     
+      const [ticketData, setTicketData] = useState({
+        description: '',
+        ticketStatus: false,
+        price: 0.0,
+       
+      });
+    
+      const addTicket = () => {
+        // Ajouter le ticket aux données de l'annonce
+        setAdData({
+          ...adData,
+          tickets: [...(adData.tickets || []), { ...ticketData }],
+        });
+        // Réinitialiser les champs du ticket après l'ajout
+        setTicketData({
+          description: '',
+          ticketStatus: false,
+          price: 0.0,
+        });
+      };
+    
+      const submitForm = async () => {
+        try {
+          // Envoi de la requête POST au backend
+          await axios.post('http://localhost:8080/ad/new', adData);
+          // Réinitialiser les données du formulaire après la soumission réussie
+          setAdData({
+            name: '',
+            date: '',
+           category:'',
+           city:'',
+            // Réinitialisez les autres champs de l'annonce ici
+          });
+          setTicketData({
+            description: '',
+            ticketStatus: false,
+            price: 0.0,
+            // Réinitialisez les champs du ticket ici
+          });
+        } catch (error) {
+          console.error('Erreur lors de la création de l\'annonce', error);
+        }
+      };
 
 
     return(
@@ -42,11 +92,11 @@ function Dashboard(){
 </div>}
 {annonces && <div className='onglet'>
 <div className="textSec">Annonces</div>
+<Ad/>
+
 </div>}
 </div>
 </div>
-
-
 
     );
 }

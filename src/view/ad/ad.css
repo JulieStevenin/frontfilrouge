@@ -1,0 +1,66 @@
+
+.cardAnnonce{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    height: fit-content;
+    width: 100vw;
+}
+
+.cardAn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+    background-color: #02e8b7 ;
+    height: 50vh;
+    width: 20vw;
+    border-radius: 10px;
+    font-size: 5px;
+    color: #FFF;
+    box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.562);
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.card:hover{
+    background-color: #04045a;
+}
+
+.informationCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: medium;
+   
+}
+.status-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: gray; /* Point gris par défaut */
+  }
+  .status-dot.connected {
+    background-color: green; /* Point vert */
+  }
+  
+  
+
+.TitreAPI{
+    text-align: center;
+    color: #04045a;
+    font-weight: 50;
+
+}
