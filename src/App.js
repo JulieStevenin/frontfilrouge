@@ -9,7 +9,7 @@ import Login from './view/login/Login';
 import AddList from './view/ad/AddList'
 import DetailsAnnonce from './view/ad/DetailsAnnonce';
 import Ad from './view/ad/ad';
-import Search from './components/Search';
+
 function App() {
 
   //bouvcle sur le nombre de annonce et pour chaque item, mets le dans la <card>
@@ -28,7 +28,7 @@ function App() {
             <Route path="/list" element={<AddList />} />
             <Route path="/annonce" element={<Ad />} />
             <Route path="/ad/:id" element={<DetailsAnnonce />} />
-             <Route path="/search" element={<Search />} />
+          
             
 
           </Route>
