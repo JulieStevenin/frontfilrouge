@@ -1,0 +1,144 @@
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .annonce-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+  }
+  
+  .annonce-title {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .annonce-description {
+    font-size: 16px;
+  }
+  
+  .annonce-date {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .commander-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .commander-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .retour-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .loading-message {
+    font-size: 18px;
+    text-align: center;
+    color: #777;
+  }
+  .buttonCard{
+    padding: 1vh;
+    color: #feffc3;
+    border: 2px solid #feffc3;
+    border-radius: 30px;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+  .buttonCard:hover{
+    background-color: #feffc3;
+    color: #1f1d40;
+  }  
+  .loading-message {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2vh;
+    height: 50vh;
+    width: clamp(500px,5vw,400px);
+    border-radius: 5px;
+    font-size: clamp(12px,5vw,30px);
+    color: #feffc3;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /*border: 1px solid #F5E1C8; /* Bordure beige */
+    /*border-radius: 41px;*/
+   
+    }
+    .submitRegister{
+      border: none;
+      background-color:#feffc3;
+      border-radius: 5px;
+      width: 20vw;
+      height: 5vh;
+      color:#350b59;
+      font-weight: 600;
+      font-size: clamp(12px,3vw,20px);;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      }
+      
+      .submitRegister:hover{
+          background-color: #ed2657;
+          color: #feffc3;
+      }
+      ::placeholder{
+        color:#000;
+        opacity: 40%;
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+    }
+    
+    .event-icon,
+    .location-icon,
+    .category-icon {
+      display: flex; 
+      align-items: center; 
+      margin-right: 8px; 
+      font-size: 20px; 
+      color: #feffc3; 
+    }
+    
+    .event-icon {
+      color: #c81c47; 
+    }
+    
+    .location-icon {
+      color: #007bff; 
+     
+    }
+    
+    .category-icon {
+      color: #3d9970; 
+    }
+    

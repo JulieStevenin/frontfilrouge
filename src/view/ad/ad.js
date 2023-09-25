@@ -75,7 +75,7 @@ const Ad = () => {
         <div className="mainRegister">
     <div className="textRegister">
     <h2 className="titleRegister">Partagez toute la culture </h2>
-    <p className="subRegister">Ajouttez vos annonces et accédez aux meilleurs événements grâce à notre communauté d'acheteurs et de revendeurs.</p>
+    <p className="subRegister">Ajoutez vos annonces et accédez aux meilleurs événements grâce à notre communauté d'acheteurs et de revendeurs.</p>
   
     </div>
       <form className="formRegister"  onSubmit={handleSubmit}>

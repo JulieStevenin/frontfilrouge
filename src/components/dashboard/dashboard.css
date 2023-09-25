@@ -48,7 +48,7 @@ padding: 2vh;
 
 .onglet{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     text-transform: uppercase;
