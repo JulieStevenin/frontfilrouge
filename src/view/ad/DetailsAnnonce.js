@@ -47,6 +47,7 @@ const DetailsAnnonce = () => {
               <div className="icons">
                 <Icon icon="system-uicons:location" className="location-icon" />
               <p className='infoCard'>City: {annonce.city}</p></div>
+              
               <button className="submitRegister" >Commander</button>
               <Link to="/list" className="submitRegister" >Retour à la liste</Link>
             </div>

@@ -8,14 +8,20 @@ const Ad = () => {
     eventDate: '',
     category: '',
     city: '',
+    ticketQuantity: 0, 
   });
   const [tickets, setTickets] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
+
+  
+  const [ticketCount, setTicketCount] = useState(0); 
   const [ticketFormData, setTicketFormData] = useState({
     description: '',
     ticketStatus: false,
     price: 0,
   });
-  const [showModal, setShowModal] = useState(false);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,18 +34,23 @@ const Ad = () => {
   };
 
   const addTicket = () => {
-    setTickets([...tickets, ticketFormData]);
-    setTicketFormData({
-      description: '',
-      ticketStatus: false,
-      price: 0,
-    });
+    if (ticketCount < formData.ticketQuantity) { 
+      const newTicket = {
+        description: '',
+        ticketStatus: false,
+        price: formData.unitPrice, 
+      };
+      setTickets([...tickets, newTicket]);
+      setTicketCount(ticketCount + 1); 
+    }
   };
 
+  
   const removeTicket = (index) => {
     const updatedTickets = [...tickets];
     updatedTickets.splice(index, 1);
     setTickets(updatedTickets);
+    setTicketCount(ticketCount - 1); // Décrémente le nombre de tickets ajoutés
   };
 
   const handleSubmit = async (e) => {
@@ -50,9 +61,9 @@ const Ad = () => {
       eventDate: formData.eventDate,
       category: formData.category,
       city: formData.city,
-      tickets: tickets,
+      tickets: formData.tickets,
+      ticketQuantity: formData.ticketQuantity,
     };
-
     console.log('Données de l\'annonce à envoyer :', adData);
 
     try {
@@ -63,13 +74,16 @@ const Ad = () => {
         eventDate: '',
         category: '',
         city: '',
+        tickets:'',
+        ticketQuantity: 0, 
+        unitPrice: 0, 
       });
       setTickets([]);
     } catch (error) {
-      console.error('Erreur lors de la création de l\'annonce :', error);
+      console.error("Erreur lors de la création de l'annonce :", error);
     }
   };
-
+ 
   return (
 
         <div className="mainRegister">
@@ -88,11 +102,55 @@ const Ad = () => {
           <input  className="inputRegister" type="text" name="category" value={formData.category} placeholder="categorie de l'evenement" onChange={handleChange} />
 
           <input className="inputRegister"  type="text" name="city" placeholder="ville de l'anonnce" value={formData.city} onChange={handleChange} />
-       
-          <button className ="add" type="button" onClick={() => setShowModal(true)}>
+          <input className="inputRegister"  type="text" name="price" placeholder="prix unitaire" value={ticketFormData.price} onChange={handleTicketChange} />
+          {/* <input className="inputRegister"  type="text" name="ticketQuantity" placeholder="nombre des tickets" value={formData.ticketQuantity} onChange={handleChange} />
+       <button className ="add" type="button" onClick={() => setShowModal(true)}>
+          Ajouter un ticket
+        </button>*/}
+        <input
+          className="inputRegister"
+          type="text"
+          name="ticketQuantity"
+          placeholder="nombre de tickets"
+          value={formData.ticketQuantity}
+          onChange={handleChange}
+        />
+        <button className="add" type="button" onClick={addTicket}>
           Ajouter un ticket
         </button>
-        {showModal && (
+        <div className="ticketRecap">
+          <h2>Récapitulatif des Tickets</h2>
+          <p>Nombre de Tickets ajoutés : {ticketCount}</p>
+          <table>
+            <thead>
+              <tr>
+              <th>id</th>
+                <th>Prix</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tickets.map((ticket, index) => (
+                <tr key={index}>
+                  <td>{ticket.id}</td>
+                 {/* <td>{ticket.ticketStatus ? 'Actif' : 'Inactif'}</td>*/}
+                  <td>{ticket.price}</td>
+                  <td>
+                    <button className="delete-button" type="button" onClick={() => removeTicket(index)}>
+                      Supprimer
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+ {/*<button className="add" type="button" onClick={() => setShowModal(true}>
+          Ajouter un ticket
+ </button>*/}
+
+      
+       {showModal && (
           <div className="modal">
             <div className="modal-content">
               <h2 >Ajouter un ticket</h2>
@@ -130,6 +188,9 @@ const Ad = () => {
               </tr>
             ))}
           </tbody>
+            </table>
+        <table>
+          {/* ... Tableau des tickets ... */}
         </table>
         <input type="submit" className="submitRegister" ></input>
       </form>

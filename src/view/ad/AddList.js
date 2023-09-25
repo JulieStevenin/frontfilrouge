@@ -55,7 +55,7 @@ const ListeDesAnnonces = () => {
                 <p className='detailsCard'>Lieu de l'événement: {annonce.city}</p>
                 </div>
                 <div className="icons">
-                <Icon icon="system-uicons:tag"  className="category-icon" />
+                <Icon icon="system-uicons:tag"  className="tag-icon" />
                 <p className='detailsCard'>Category de l'événement: {annonce.category}</p>
                       
               </div>
