@@ -8,6 +8,7 @@ function Account(){
 
     return(
 <div className="mainAC">
+
 <Dashboard></Dashboard>
 </div>
 

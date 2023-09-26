@@ -18,9 +18,9 @@ function Dashboard() {
   const [adData, setAdData] = useState({
     name: '',
     eventDate: '',
-    category: '', // Changed "Category" to "category"
+    category: '', 
     City: '',
-    tickets: [], // Initialize tickets as an empty array
+    tickets: [], 
   });
 
   const [ticketData, setTicketData] = useState({
@@ -29,13 +29,14 @@ function Dashboard() {
     price: 0.0,
   });
 
+  const [addStatus, setAddStatus] = useState('');
+
   const addTicket = () => {
-    // Ajouter le ticket aux données de l'annonce
+
     setAdData({
       ...adData,
       tickets: [...adData.tickets, { ...ticketData }],
     });
-    // Réinitialiser les champs du ticket après l'ajout
     setTicketData({
       description: '',
       ticketStatus: false,
@@ -45,10 +46,12 @@ function Dashboard() {
 
   const submitForm = async () => {
     try {
-      const response = await fetch('http://localhost:8080/ad/create', {
+      const authToken = localStorage.getItem('authToken');
+      const response = await fetch('http://localhost:8080/ad/createdAd', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+       'Authorization': `Bearer ${authToken}`,
+       'Content-Type': 'application/json'
         },
         body: JSON.stringify(adData),
       });
@@ -60,13 +63,14 @@ function Dashboard() {
           category: '',
           city: '',
           photo:'',
-          tickets: [],
+          tickets: []
         });
         setTicketData({
           description: '',
           ticketStatus: false,
           price: '',
         });
+        setAddStatus('Votre annonce est publiée');
       } else {
         console.error('Erreur lors de la création de l\'annonce');
       }
@@ -74,7 +78,6 @@ function Dashboard() {
       console.error('Erreur lors de la création de l\'annonce', error);
     }
   };
-
 
   return (
     <div className="mainDB">
@@ -198,10 +201,12 @@ function Dashboard() {
                     <li key={index}>{ticket.description}</li>
                   ))}
               </ul>
+              {addStatus && <p className='done'>{addStatus}</p>}
             </div>
           </div>
         )}
         <img src="musician2.png" className="imgAccount" />
+      
       </div>
     </div>
   );

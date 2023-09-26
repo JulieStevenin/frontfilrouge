@@ -7,12 +7,14 @@ import Inscription from './view/register/register';
 import TicketPage from './view/ticketpage/TicketPage';
 import OrderConfirmation from './view/order/OrderConfirmation';
 import OrderPayment from './view/orderpayment/OrderPayment';
+import Register from './view/register/register';
 import Home from './view/home/Home';
 import Account from './view/account/Account';
 import Login from './view/login/Login';
 import AddList from './view/ad/AddList';
 import DetailsAnnonce from './view/ad/DetailsAnnonce';
 import Ad from './view/ad/ad';
+
 
 function App() {
 
@@ -24,9 +26,9 @@ function App() {
   <Topbar/>
     <Routes>
           <Route path="/" >
-          <Route index element={<Home/>} />
-            <Route path="/login" element={<Login/>} />
-            <Route path="/Inscription" element={<Inscription />} />
+            <Route index element={<Home/>} />
+            <Route path="/Login" element={<Login/>} />
+            <Route path="/Register" element={<Register />} />
             <Route path="/Account" element={<Account />} />
             <Route path="/TicketPage" element={<TicketPage />} />
             <Route path="/OrderConfirmation" element={<OrderConfirmation/>} />

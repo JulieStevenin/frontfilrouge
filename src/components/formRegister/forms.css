@@ -65,3 +65,17 @@ cursor: pointer;
     background-color: #ed2657;
     color: #feffc3;
 }
+
+.done{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: mediumseagreen;
+    color:#FFf;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 1vh;
+
+}
