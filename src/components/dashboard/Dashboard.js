@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './dashboard.css';
 import { Icon } from '@iconify/react';
+import { useEffect } from 'react';
 
 function Dashboard() {
   const [profil, setProfil] = useState(true);
@@ -45,6 +46,12 @@ function Dashboard() {
     });
   };
 
+  const [userData, setUserData] = useState({
+    firstName: '',
+    lastName: '',
+    mail: ''
+  });
+
   const submitForm = async () => {
     try {
       const authToken = localStorage.getItem('authToken');
@@ -81,7 +88,26 @@ function Dashboard() {
       console.error('Erreur lors de la création de l\'annonce', error);
     }
   };
-
+  const authToken = localStorage.getItem('authToken');
+  const headers = {
+    'Authorization': `Bearer ${authToken}`,
+  
+  };
+  
+  useEffect(() => {
+    fetch('http://localhost:8080/user/data', { headers })
+      .then(response => response.json())
+      .then(data => {
+        setUserData({
+          fname: data.fname,
+          lname: data.lname,
+          mail: data.mail
+        });
+      })
+      .catch(error => {
+        // Gérez les erreurs ici
+      });
+  }, []); 
   return (
     <div className="mainDB">
       <div className="menuDB">
@@ -107,6 +133,9 @@ function Dashboard() {
         {profil && (
           <div className="onglet">
             <div className="textSec">Profil</div>
+            <div className="dataProfil">{userData.lname}</div>
+            <div className="dataProfil">{userData.fname}</div>
+            <div className="dataProfil">{userData.mail}</div>
           </div>
         )}
         {achats && (

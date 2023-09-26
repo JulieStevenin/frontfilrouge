@@ -3,13 +3,13 @@ import './card.css'
 
 function Card() {
     const [ads, setAds] = useState([]);
-    const [userDetails, setUserDetails] = useState({});
+    const [user, setUser] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:8080/ad/all', {
             method: 'GET',
             headers: {
-                'Accept': 'application/json',
+                'Accept': 'application/json', 
             },
         })
         .then(response => {
@@ -20,31 +20,13 @@ function Card() {
         })
         .then(data => {
             setAds(data);
-
-     
-            data.forEach(ad => {
-                fetch(`http://localhost:8080/user/${ad.seller.user.id}`, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                    },
-                })
-                .then(response => response.json())
-                .then(userData => {
-                    setUserDetails(prevDetails => ({
-                        ...prevDetails,
-                        [ad.id]: userData
-                    }));
-                })
-                .catch(error => {
-                    console.error('Erreur lors de la récupération des données de l\'utilisateur:', error);
-                });
-            });
         })
         .catch(error => {
             console.error('Erreur lors de la récupération des données:', error);
         });
     }, []);
+    
+
 
     return (
         <div className="bg">
@@ -58,8 +40,8 @@ function Card() {
                                 <img src={ad.photo} alt={ad.name} className='imgCard' />
                             </div>
                             <div className="textCard">
-                                {ad.name}
-                                <p className='infoCard'>{userDetails[ad.id] ? `${userDetails[ad.id].fname} ${userDetails[ad.id].lname}` : 'Chargement en cours...'}</p>
+                            {ad.name}
+                                <p className='infoCard'></p>
                             </div>
                         </div>
                     ))}
@@ -71,4 +53,3 @@ function Card() {
 }
 
 export default Card;
-

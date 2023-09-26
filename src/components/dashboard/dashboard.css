@@ -140,3 +140,15 @@ select{
     padding: 1vh;
 
 }
+
+/***** Profil *****/
+
+.dataProfil{
+    background-color: #350b59;
+    color: #FFF;
+    width: 30vw;
+    padding: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+}
