@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './orderpayment.css'
 
 
 const OrderPayment = () => {
@@ -40,10 +41,14 @@ const OrderPayment = () => {
   
 
   return (
+    <div className='main'>
+              <div className="orderTitle">
+          <h1>Paiement de la commande</h1>
+        </div>
     <form onSubmit={handleSubmit}>
       <div>
         <label>Numéro de carte bancaire </label>
-        <input
+        <input className='paycard'
           type="text"
           value={cardCode}
           onChange={handleCardCodeChange}
@@ -52,7 +57,7 @@ const OrderPayment = () => {
       </div>
       <div>
         <label>Code de sécurité (CVV)</label>
-        <input
+        <input className='securitycode'
           type="text"
           value={securityCode}
           onChange={handleSecurityCodeChange}
@@ -61,15 +66,16 @@ const OrderPayment = () => {
       </div>
       <div>
         <label>Date de validité </label>
-        <input
+        <input className='date'
           type="text"
           value={cardDate}
           onChange={handleCardDateChange}
           placeholder="MM/YY"
         />
       </div>
-      <button type="submit">Valider le paiement</button>
+      <button className='goToValidation' type="submit">Valider le paiement</button>
     </form>
+    </div>
   );
 };
 

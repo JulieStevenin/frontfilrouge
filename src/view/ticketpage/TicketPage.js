@@ -12,7 +12,7 @@ function TicketPage({ticket}){
 <div className = "main">
 <div className="Ticket">Ticket
 <Link to={`/OrderConfirmation/`}>
-        <button>Commander</button>
+        <button className='goToPayment'>Commander</button>
 </Link>
     </div>
     </div>
