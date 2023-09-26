@@ -1,10 +1,22 @@
-::placeholder{
+.searchHeaderDate::placeholder{
     color:#000;
     opacity: 40%;
     font-family: sans-serif;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
 }
+.searchHeaderName::placeholder{
+    color:#000;
+    opacity: 40%;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
 
 
 .header{
@@ -20,6 +32,7 @@
     margin-right:auto;
     border-radius: 10px;
     padding: 10px;
+
    
 
 }
@@ -83,14 +96,58 @@
     gap:2vw;
 }
 
-.searchHeader{
+.searchHeaderName{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:#feffc3;
-    width: 40vw;
+    width: 350px;
     height: 4vh;
     border-radius: 5px;
     border:none;
-    
+}
+
+.searchHeaderDate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#feffc3;
+    width: 200px;
+    height: 4vh;
+    border-radius: 5px;
+    border:none;
+}
+
+
+.searchButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    background-color: #2f114b;
+    text-transform: uppercase;
+    color:#ebeaea;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchButton:hover{
+    background-color: #4f3969;
+    color:#feffc3;
+}
+
+.searchContainer {
+    display: flex;
+    gap: 1vw;  
+    align-items: center;
+}
+
+.betweenSearchBars {
+    color:#2f114b;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+
 }
