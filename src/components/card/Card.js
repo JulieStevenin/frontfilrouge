@@ -41,12 +41,12 @@ function Card() {
                             </div>
                             <div className="textCard">
                             {ad.name}
-                                <p className='infoCard'></p>
+                                <p className='infoCard'> Vendeur : {ad.fname}</p>
                             </div>
                         </div>
                     ))}
                 </div>
-                <div className="buttonCard">En voir plus</div>
+   
             </div>
         </div>
     );

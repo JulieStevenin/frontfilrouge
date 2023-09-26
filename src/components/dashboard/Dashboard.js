@@ -47,8 +47,8 @@ function Dashboard() {
   };
 
   const [userData, setUserData] = useState({
-    firstName: '',
-    lastName: '',
+    fname: '',
+    lname: '',
     mail: ''
   });
 
@@ -69,6 +69,8 @@ function Dashboard() {
       if (response.ok) {
         setAdData({
           name: '',
+          lname:'',
+          fname:'',
           eventDate: '',
           category: '',
           city: '',
@@ -153,7 +155,7 @@ function Dashboard() {
             <div className="textSec">Annonce</div>
             <div className="addAd">
               <h1>Créer une annonce</h1>
-              <form className="formAd">
+              <form className="formAd">           
                 <input
                   type="text"
                   name="name"
