@@ -99,6 +99,7 @@
 .imgCard{
     border-radius: 10px;
     object-fit: cover;
+    width: 5vw;
 }
 
 .buttonCard{

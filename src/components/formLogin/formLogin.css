@@ -1,0 +1,43 @@
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    background-color: #350b59;
+    padding: 5vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px #feffc3;
+    width: 50vw;
+
+}
+
+.inputLogin{
+border: none;
+background-color:#fFF;
+min-width: 40vw;
+border-radius: 10px;
+height: 5vh;
+color:#350b59;
+font-weight: 600;
+font-size: 12px;
+}
+
+
+.submitLogin{
+border: none;
+background-color:#feffc3;
+border-radius: 5px;
+width: 20vw;
+height: 5vh;
+color:#350b59;
+font-weight: 600;
+font-size: clamp(12px,3vw,20px);;
+transition: background-color 0.3s ease;
+cursor: pointer;
+}
+
+.submitRegister:hover{
+    background-color: #ed2657;
+    color: #feffc3;
+}

@@ -8,7 +8,7 @@ function Account(){
 
     return(
 <div className="mainAC">
-    fdf
+
 <Dashboard></Dashboard>
 </div>
 

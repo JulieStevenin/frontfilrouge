@@ -8,8 +8,8 @@ return(
 <Link to="/"> <img src="logo.jpg" className='logo'/></Link>
     <input className ="searchHeader" placeholder="Recherchez par catégorie, artiste ou lieu" type="search"/>
     <div className="buttonUser">
-    <Link to="/Inscription"> <p className="inscription">Inscription</p></Link>
-    <p className="connexion">connexion</p>
+    <Link to="/Register"> <p className="inscription">Inscription</p></Link>
+    <Link to="/Login"> <p className="connexion">connexion</p></Link>
     </div>
 </div>
 
