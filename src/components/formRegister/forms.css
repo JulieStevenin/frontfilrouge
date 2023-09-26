@@ -12,6 +12,13 @@
 
 }
 
+input::placeholder {
+    font-weight: bold;
+    opacity: 1;
+    color: red;
+  }
+  
+
 .inputRegister{
 border: none;
 background-color:#fFF;

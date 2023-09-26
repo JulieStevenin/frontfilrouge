@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './forms.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function FormRegister() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ function FormRegister() {
   });
 
   const [registrationStatus, setRegistrationStatus] = useState(''); 
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

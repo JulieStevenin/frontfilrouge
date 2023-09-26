@@ -41,7 +41,7 @@ function Dashboard() {
     setTicketData({
       description: '',
       ticketStatus: false,
-      price: 0.0,
+      price:'',
     });
   };
 
@@ -54,7 +54,9 @@ function Dashboard() {
        'Authorization': `Bearer ${authToken}`,
        'Content-Type': 'application/json'
         },
+  
         body: JSON.stringify(adData),
+
       });
 
       if (response.ok) {

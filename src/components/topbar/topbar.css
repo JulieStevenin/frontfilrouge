@@ -63,6 +63,26 @@
     color:#feffc3;
 }
 
+.deconnexion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #feffc3;
+    text-transform: uppercase;
+    color:#d62451;
+    padding: 1vh;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(5px,2vw,15px);
+    transition: background-color 0.3s ease;
+}
+
+.deconnexion:hover{
+    background-color: #04045ac9;
+    color:#feffc3;
+}
+
 .logo{
    display: flex; 
     justify-content: center;
