@@ -110,6 +110,10 @@ function Dashboard() {
         // Gérez les erreurs ici
       });
   }, []); 
+
+
+
+
   return (
     <div className="mainDB">
       <div className="menuDB">
@@ -147,7 +151,8 @@ function Dashboard() {
         )}
         {ventes && (
           <div className="onglet">
-            <div className="textSec">Ventes</div>
+            <div className="textSec">
+              Safa : Ventes</div>
           </div>
         )}
         {annonces && (
