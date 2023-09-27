@@ -32,8 +32,51 @@
     margin-right:auto;
     border-radius: 10px;
     padding: 10px;
+    z-index: 99;
+}
 
-   
+.mainSearch {
+    background-color: #feffc3;
+    width : 50vw;
+    height :fit-content;
+    padding : 2vh;
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    z-index : 100;
+    margin-left : auto;
+    margin-right : auto;
+    border-radius: 10px;
+
+}
+
+.adItem {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 50vw;
+    margin-bottom: 2vh;
+
+
+}
+
+.ongletSearch {
+    width : 20vw;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgSearch {
+    width: 10vw;
+    border-radius: 10px;
+
+}
+
+.cardSearch {
+    width : 50 vw;
 
 }
 

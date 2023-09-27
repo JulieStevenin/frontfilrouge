@@ -48,6 +48,7 @@ function App() {
             <Route path="/OrderConfirmation" element={<OrderConfirmation/>} />
             <Route path="/OrderConfirmation/:id" element={<OrderConfirmation/>} />
             <Route path="/OrderPayment" element={<OrderPayment/>} />
+            <Route path="/ad/:adId" element={""} />
         </Route>
       </Routes>
       <Footer className="footer" />

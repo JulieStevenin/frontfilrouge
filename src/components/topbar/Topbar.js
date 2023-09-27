@@ -13,12 +13,12 @@ function TopbarCo() {
     navigate("/");
   };
 
-  const [eventName, setEventName] = useState('');
+  const [name, setName] = useState('');
   const [eventDate, setEventDate] = useState('');
 
   const handleSearch = async () => {
       try {
-          const response = await fetch(`http://localhost:8080/ad/searchAd?name=${eventName}&date=${eventDate}`);
+          const response = await fetch(`http://localhost:8080/ad/search?name=${name}&date=${eventDate}`);
           
           if (!response.ok) {
               throw new Error('Réponse du réseau non ok.');
@@ -39,8 +39,8 @@ function TopbarCo() {
             <div className='searchContainer'>
                 <div>
             <input 
-    value={eventName}
-    onChange={(e) => setEventName(e.target.value)}
+    value={name}
+    onChange={(e) => setName(e.target.value)}
     className="searchHeaderName" 
     placeholder="Recherchez par nom d'évènement" 
     type="text" 

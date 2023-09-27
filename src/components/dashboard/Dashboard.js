@@ -166,7 +166,8 @@ function Dashboard() {
                   value={adData.name}
                   onChange={(e) => setAdData({ ...adData, name: e.target.value })}
                   placeholder="Nom de l'annonce"
-                  className="field"
+                  className="field" 
+                  required
                 />
                       <input
                   type="text"
@@ -175,6 +176,7 @@ function Dashboard() {
                   onChange={(e) => setAdData({ ...adData, city: e.target.value })}
                   placeholder="lieu"
                   className="field"
+                  required
                 />
 
                   <input
@@ -184,6 +186,7 @@ function Dashboard() {
                   onChange={(e) => setAdData({ ...adData, photo: e.target.value })}
                   placeholder="Mettez l'url d'une image de l'événement"
                   className="field"
+                  required
                 />
                         <input
                   type="text"
@@ -192,6 +195,7 @@ function Dashboard() {
                   onChange={(e) =>setTicketData({ ...ticketData, price: e.target.value })}
                   placeholder="prix"
                   className="field"
+                  required
                 />
                 <input
                   type="date"
@@ -202,6 +206,7 @@ function Dashboard() {
                   }
                   placeholder="Date de l'événement"
                   className="field"
+                  required
                 />
                 <select
                   name="category"
@@ -224,6 +229,7 @@ function Dashboard() {
                   }
                   placeholder="Description du billet (exemple : place A21 premier rang)"
                   className="field"
+                  required
                 />
                 <button type="button" onClick={addTicket} className="buttonAd">
                   Ajouter un ticket
