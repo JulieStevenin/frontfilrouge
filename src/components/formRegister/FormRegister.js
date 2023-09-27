@@ -53,6 +53,7 @@ function FormRegister() {
   };
 
   return (
+    <>
     <div>
       <form className="formRegister" onSubmit={handleSubmit}>
         <input
@@ -90,13 +91,11 @@ function FormRegister() {
         <input type="submit" className="submitRegister" value="S'inscrire" />
       </form>
 
-      {registrationStatus && <p className='done'>{registrationStatus}</p>}
-
-
-      <p>
-        Déjà inscrit ? Vous pouvez maintenant vous <Link to="/login">connecter ici</Link>.
-      </p>
+      {registrationStatus && <p className='done'>{registrationStatus}</p>}   
     </div>
+      <p>Déjà inscrit ? Vous pouvez maintenant vous <Link to="/login">connecter ici</Link>.
+      </p>
+      </>
   );
 }
 

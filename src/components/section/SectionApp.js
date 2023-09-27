@@ -17,7 +17,7 @@ function SectionApp(){
          <p className='textSection2'>Grâce à notre communauté, partagez votre amour de la culture tout en économisant sur vos billets.</p>
         
         <div className="avis">On nous aime ❤️<div className="logAvis"><img className='imgAvis' src="trustpilot.png"/><img className='imgAvis' src="google.jpg"/></div></div>
-        <Link to="/Inscription"> <div className="button">Inscrivez-vous</div> </Link>
+        <Link to="/Register"> <div className="button">Inscrivez-vous</div> </Link>
         
             </div>
             </div>

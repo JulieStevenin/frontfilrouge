@@ -1,0 +1,44 @@
+
+.mainReview{
+    background: #feffc3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+}
+
+.titleReview{
+    text-transform: uppercase;
+    color: #350b59;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#FFF;
+    box-shadow: 5px 5px #350b59;
+    padding: 1vh;
+    border-radius: 10px;
+    color:#350b59;
+    gap:2vh;
+    width: 15vw;
+    height: 30vh;
+}
+
+p{
+    margin: 0;
+    text-align: center;
+    
+}
+
+.textReview{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.imgReview{
+    border-radius: 100px;
+    width: 8vw;
+}

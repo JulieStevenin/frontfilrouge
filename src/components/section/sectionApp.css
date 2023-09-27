@@ -13,13 +13,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 60vw;
-    min-height: 60vh;
+    min-width: 90vw;
+    min-height:60vh;
     background: rgb(237,38,87);
     background: linear-gradient(180deg, rgba(237,38,87,1) 0%, rgba(254,185,0,1) 100%);
     border-radius: 4vw ;
     padding: 1vh;
-    margin: 2vh;
+    margin: 5vh;
 }
 
 .titleSection{
@@ -65,7 +65,7 @@
     justify-content: center;
     align-items: center;
     padding: 1vh;
-    border-radius: 6vw;
+    border-radius: 2vw;
     background-color: #feffc3;
     box-shadow: 5px 5px #350b59;
     width: 40%;
