@@ -47,7 +47,7 @@
     justify-content: space-around;
     align-items: center;
     margin: 2vh;
-    height: 15vh;
+    height: 18vh;
     width: clamp(700px,5vw,400px);
     border-radius: 5px;
     font-size: clamp(12px,5vw,30px);
@@ -99,7 +99,7 @@
 .imgCard{
     border-radius: 10px;
     object-fit: cover;
-    width: clamp(60px,10vw,150px);
+    width: clamp(70px,10vw,150px);
 }
 
 .buttonCard{

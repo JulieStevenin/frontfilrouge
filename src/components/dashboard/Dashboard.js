@@ -38,7 +38,6 @@ function Dashboard() {
       ...adData,
       tickets: [...adData.tickets, { ...ticketData }],
     });
-
     setTicketData({
       description: '',
       ticketStatus: false,
@@ -152,7 +151,7 @@ function Dashboard() {
         {ventes && (
           <div className="onglet">
             <div className="textSec">
-              Safa : Ventes</div>
+              Safa retrouver annonce vente par mail : Ventes</div>
           </div>
         )}
         {annonces && (

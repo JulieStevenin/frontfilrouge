@@ -8,7 +8,7 @@ function Footer(){
 
         <div className="footer">
             <div>
-            <h1 className='hFooter'>Merci d'avoir consulter notre travail</h1>
+            <h1 className='hFooter'>Merci d'avoir consulté notre travail</h1>
             <p className="ftext2">Il a été réalisé avec ❤️</p>
             </div>
         <div className="mainFooter">

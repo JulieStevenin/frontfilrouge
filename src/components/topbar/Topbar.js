@@ -6,10 +6,10 @@ function TopbarCo() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Supprimer le authToken du localStorage
+
     localStorage.removeItem("authToken");
     
-    // Rediriger vers la page d'accueil
+
     navigate("/");
   };
 
