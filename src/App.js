@@ -1,7 +1,7 @@
 
 import './App.css'
 import Topbar from './components/topbar/Topbar';
-import TopbarCo from './components/topbar/Topbar';
+import TopbarCo from './components/topbar/TopbarCo';
 import {Routes, Route} from 'react-router-dom';
 import Register from './view/register/register';
 import TicketPage from './view/ticketpage/TicketPage';
@@ -15,7 +15,6 @@ import Footer from './components/footer/Footer';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('authToken'));
-
   useEffect(() => {
     const checkAuthToken = () => {
       const authToken = localStorage.getItem('authToken');
@@ -36,7 +35,6 @@ function App() {
     localStorage.removeItem('authToken');
     setToken(null);
   };
-
   return (
     <div className="app-wrapper">
       {token ? <TopbarCo /> : <Topbar />}

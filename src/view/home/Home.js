@@ -2,7 +2,7 @@ import Hero from "../../components/hero/Hero";
 import Card from "../../components/card/Card";
 import SectionApp from "../../components/section/SectionApp";
 import Testimonials from "../../components/testimonials/testimonials";
-import Review from "../../components/review/Review";
+import Review from "../../components/review/review";
 
 
 function Home(){
