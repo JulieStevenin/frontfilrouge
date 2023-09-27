@@ -56,7 +56,7 @@ function Paiement() {
       {isValidated ? (
         <p>L'OrderTicket a été validé avec succès!</p>
       ) : (
-        <div className='main'>
+        <div className='mainBloc'>
           {order ? (
             <div className='CommandeBloc'>
               <p>Prix total : {order.totalPrice}</p>

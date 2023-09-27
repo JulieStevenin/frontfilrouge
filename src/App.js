@@ -45,8 +45,8 @@ function App() {
           <Route path="/Account" element={<Account />} />
             <Route path="/OrderPayment" element={<OrderPayment/>} />
             <Route path="/ad/:adId" element={<AdDetails/>} />
-            <Route path="/commande/:id" element={<Paiement/>} />
-            </Route>
+            <Route path="/commande/:id" element={<Paiement/>} />         
+        </Route>
       </Routes>
    
       <Footer className="footer" />
