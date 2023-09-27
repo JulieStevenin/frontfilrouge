@@ -12,7 +12,8 @@ import Account from './view/account/Account';
 import Login from './view/login/Login';
 import { useEffect, useState } from 'react';
 import Footer from './components/footer/Footer';
-
+import UpdateAd from './components/dashboard/UpdateAd';
+import AdDetails from './components/dashboard/AdDetails';
 function App() {
   const [token, setToken] = useState(localStorage.getItem('authToken'));
   useEffect(() => {
@@ -48,6 +49,12 @@ function App() {
             <Route path="/OrderConfirmation" element={<OrderConfirmation/>} />
             <Route path="/OrderConfirmation/:id" element={<OrderConfirmation/>} />
             <Route path="/OrderPayment" element={<OrderPayment/>} />
+            <Route path="/update/:id" element={<UpdateAd/>} />
+            <Route path="/ad-details/:adId" element={<AdDetails/>} />
+            
+
+
+           
         </Route>
       </Routes>
       <Footer className="footer" />

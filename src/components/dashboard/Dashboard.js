@@ -2,19 +2,40 @@ import { useState } from 'react';
 import './dashboard.css';
 import { Icon } from '@iconify/react';
 import { useEffect } from 'react';
-
+import './update.css';
+import AdDetails from './AdDetails';
 function Dashboard() {
   const [profil, setProfil] = useState(true);
   const [achats, setAchats] = useState(false);
   const [ventes, setVentes] = useState(false);
   const [annonces, setAnnonces] = useState(false);
-
+  const [selectedAd, setSelectedAd] = useState(null);
+  const [isUpdateMode, setUpdateMode] = useState(false);
+  const [adDetails, setAdDetails] = useState(null);
+  const [updatedAd, setUpdatedAd] = useState({
+    id: '',
+    name: '',
+    eventDate: '',
+    category: '',
+    city: '',
+    tickets: [],
+  });
   function show(name) {
     setProfil(name === 'profil');
     setAchats(name === 'achats');
     setVentes(name === 'ventes');
     setAnnonces(name === 'annonces');
   }
+
+  
+
+
+
+  const handleUpdateSubmit = () => {
+ 
+    setUpdateMode(false); // Désactiver le mode de mise à jour
+  };
+
 
   const [adData, setAdData] = useState({
     name: '',
@@ -106,13 +127,119 @@ function Dashboard() {
         });
       })
       .catch(error => {
-        // Gérez les erreurs ici
+   
       });
   }, []); 
 
+  const [salesAds, setSalesAds] = useState([]);
+
+  useEffect(() => {
+
+    fetch('http://localhost:8080/ad/all', { headers })
+      .then((response) => response.json())
+      .then((data) => {
+        setSalesAds(data);
+      })
+      .catch((error) => {
+        console.error('Erreur lors de la récupération des annonces de vente:', error);
+      });
+  }, []);
+
+  const handleDeleteAd = (adId) => {
+    fetch(`http://localhost:8080/ad/${adId}`, {
+      method: 'DELETE',
+      headers,
+    })
+      .then(response => {
+        if (response.ok) {
+     
+          const updatedAds = salesAds.filter(ad => ad.id !== adId);
+          setSalesAds(updatedAds);
+        } else {
+          console.error('Erreur lors de la suppression de l\'annonce');
+        }
+      })
+      .catch(error => {
+        console.error('Erreur lors de la suppression de l\'annonce:', error);
+      });
+  }
+  const openUpdateModal = (ad) => {
+    setSelectedAd(ad);
+    setUpdateMode(true);
+  };
+
+  
+  const closeUpdateModal = () => {
+    setSelectedAd(null);
+    setUpdateMode(false);
+  };
+
+  
+
+  const [updatedAdData, setUpdatedAdData] = useState({
+    id: '',
+    name: '',
+    eventDate: '',
+    category: '',
+    city: '',
+    tickets: [],
+  });
 
 
+  const [selectedAdDetails, setSelectedAdDetails] = useState(null);
+ 
+  const handleSubmitUpdate = async () => {
+    try {
+      const authToken = localStorage.getItem('authToken');
+      const response = await fetch(`http://localhost:8080/ad/${selectedAd.id}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${authToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedAd)
+      });
 
+      if (response.ok) {
+     
+        setUpdateMode(false);
+      } else {
+        console.error('Erreur lors de la mise à jour de l\'annonce');
+      }
+    } catch (error) {
+      console.error('Erreur lors de la mise à jour de l\'annonce', error);
+    }
+  };
+  const handleAdClick = (ad) => {
+    setSelectedAd(ad);
+    setUpdateMode(false); 
+  };
+
+  const handleUpdateAd = () => {
+    setUpdateMode(true); 
+
+  
+    if (selectedAd) {
+      setUpdatedAd({
+        id: selectedAd.id,
+        name: selectedAd.name,
+        eventDate: selectedAd.eventDate,
+        category: selectedAd.category,
+        city: selectedAd.city,
+        tickets: selectedAd.tickets,
+        
+      });
+    }
+  };
+
+  const showAdDetails = (ad) => {
+    setSelectedAdDetails(ad);
+  };
+  
+  const closeAdDetails = () => {
+    setSelectedAdDetails(null);
+    setUpdateMode(false);
+  };
   return (
     <div className="mainDB">
       <div className="menuDB">
@@ -148,12 +275,86 @@ function Dashboard() {
             <div className="textSec">Achats</div>
           </div>
         )}
-        {ventes && (
-          <div className="onglet">
-            <div className="textSec">
-              Safa retrouver annonce vente par mail : Ventes</div>
+      
+      
+          {ventes && (
+  <div className="onglet">
+    <div className="textSec">Ventes</div>
+    <div className="cardUpdate">
+      {salesAds.map((ad) => (
+        <div className="Vente" key={ad.id}>
+          <div className="pictureCard">
+            <img src={ad.photo} alt={ad.name} className="imgCard" />
           </div>
-        )}
+          <div className="textCard">
+            {ad.name}
+            <p className="infoCard">Vendeur : {ad.fname}</p>
+            <div className="button-container">
+              <button onClick={() => handleDeleteAd(ad.id)} className="btn btn-danger supp">
+                Supprimer
+              </button>
+              <button onClick={() => showAdDetails(ad)} className="btn btn-primary supp">
+                Détails
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+{selectedAdDetails && (
+  <div className="modal">
+    <div className="modal-content">
+      <span className="close" onClick={closeAdDetails}>&times;</span>
+     
+      {isUpdateMode ? (
+        <div className="Model">
+          <form className="formAnn">
+            <input className="inputAnn"
+              type="text"
+              value={selectedAdDetails?.name || ''}
+              onChange={(e) => setSelectedAdDetails({ ...selectedAdDetails, name: e.target.value })}
+            />
+              <input  className="inputAnn"
+              type="text"
+              value={selectedAdDetails?.city || ''}
+              onChange={(e) => setSelectedAdDetails({ ...selectedAdDetails, city: e.target.value })}
+            />
+                    <input  className="inputAnn"
+              type="text"
+              value={selectedAdDetails?.category || ''}
+              onChange={(e) => setSelectedAdDetails({ ...selectedAdDetails, category: e.target.value })}
+            />
+                  <input  className="inputAnn"
+              type="text"
+              value={selectedAdDetails?.photo || ''}
+              onChange={(e) => setSelectedAdDetails({ ...selectedAdDetails, photo: e.target.value })}
+            />
+                  <input  className="inputAnn"
+              type="date"
+              value={selectedAdDetails?.eventDate || ''}
+              onChange={(e) => setSelectedAdDetails({ ...selectedAdDetails, eventDate: e.target.value })}
+            />
+                
+                  <button  className="submitAnn" onClick={handleSubmitUpdate}>Enregistrer</button>
+                  </form>
+        </div>
+      ) : (
+        <div>
+          <AdDetails ad={selectedAdDetails} />
+          <button   className="submitAnn" onClick={handleUpdateAd} >
+            Modifier
+          </button>
+        </div>
+      )}
+      <button  className="submitAnn1" onClick={closeAdDetails} >
+        Retour
+      </button>
+    </div>
+  </div>
+)}
         {annonces && (
           <div className="onglet">
             <div className="textSec">Annonce</div>
