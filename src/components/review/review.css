@@ -2,9 +2,10 @@
 .mainReview{
     background: #feffc3;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    height: 60vh;
+    min-height: 60vh;
 }
 
 .titleReview{
@@ -19,12 +20,14 @@
     align-items: center;
     background-color:#FFF;
     box-shadow: 5px 5px #350b59;
-    padding: 1vh;
+    padding: 2vh;
     border-radius: 10px;
     color:#350b59;
     gap:2vh;
-    width: 15vw;
-    height: 30vh;
+    max-width: 35vw;
+    margin: 2vh;
+    min-height: 30vh;
+    font-size: clamp(12px,3vw,25px);;
 }
 
 p{

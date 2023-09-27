@@ -122,7 +122,8 @@ select{
     width: 30vw;
     background-color: #d62451;
     border-radius: 10px;
-    box-shadow: 5px 5px  #feffc3;;
+    box-shadow: 5px 5px  #feffc3;
+    margin: 5vh;
 
 }
 

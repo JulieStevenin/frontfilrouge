@@ -9,7 +9,7 @@ function Hero (){
      
        <div className="mainHero">
         <div className="hero">
-        <div className="bubbleHero">N°1 de la revente culturelle</div>
+        <div className="bubbleHero">N°1 du partage culturel</div>
         <h1 className='promesse'>Achetez, revendez<br/> vos billets</h1>
         <p className='textHero'>Partagez la culture au prix juste</p>
         <div className="allButtonHero">
