@@ -1,0 +1,11 @@
+.CommandeBloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    color: black;
+    width: 50vw;
+    height: 20vh;
+
+}

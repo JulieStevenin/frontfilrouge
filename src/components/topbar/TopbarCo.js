@@ -52,7 +52,7 @@ function TopbarCo() {
     onChange={(e) => setEventDate(e.target.value)}
     className="searchHeaderDate" 
     placeholder="Date (AAAA-MM-JJ)" 
-    type="text" 
+    type="date"
 />
 </div>
             <button onClick={handleSearch} className="searchButton">Rechercher</button>

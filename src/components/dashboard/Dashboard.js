@@ -21,6 +21,7 @@ function Dashboard() {
     eventDate: '',
     category: '', 
     City: '',
+    ticketQuantity:'',
     tickets: [], 
   });
 
@@ -74,6 +75,7 @@ function Dashboard() {
           category: '',
           city: '',
           photo:'',
+          ticketQuantity:'',
           tickets: []
         });
         setTicketData({
@@ -120,10 +122,6 @@ function Dashboard() {
           <Icon icon="system-uicons:home" color="#d62451" width="5vh" />
           Profil
         </div>
-        <div className="catDash" onClick={() => show('achats')}>
-          <Icon icon="system-uicons:ticket" color="#d62451" width="5vh" />
-          Achats
-        </div>
         <div className="catDash" onClick={() => show('ventes')}>
           <Icon icon="system-uicons:thread" color="#d62451" width="5vh" />
           Ventes
@@ -158,63 +156,18 @@ function Dashboard() {
           <div className="onglet">
             <div className="textSec">Annonce</div>
             <div className="addAd">
-              <h1>Créer une annonce</h1>
-              <form className="formAd">           
+    
+              <form className="formAd">
+              <h1>Ajouter vos billets</h1>
                 <input
-                  type="text"
-                  name="name"
-                  value={adData.name}
-                  onChange={(e) => setAdData({ ...adData, name: e.target.value })}
-                  placeholder="Nom de l'annonce"
-                  className="field"
-                />
-                      <input
-                  type="text"
-                  name="city"
-                  value={adData.city}
-                  onChange={(e) => setAdData({ ...adData, city: e.target.value })}
-                  placeholder="lieu"
-                  className="field"
-                />
-
-                  <input
-                  type="text"
-                  name="photo"
-                  value={adData.photo}
-                  onChange={(e) => setAdData({ ...adData, photo: e.target.value })}
-                  placeholder="Mettez l'url d'une image de l'événement"
-                  className="field"
-                />
-                        <input
                   type="text"
                   name="price"
                   value={ticketData.price}
                   onChange={(e) =>setTicketData({ ...ticketData, price: e.target.value })}
                   placeholder="prix"
                   className="field"
+                  required
                 />
-                <input
-                  type="date"
-                  name="eventDate"
-                  value={adData.eventDate}
-                  onChange={(e) =>
-                    setAdData({ ...adData, eventDate: e.target.value })
-                  }
-                  placeholder="Date de l'événement"
-                  className="field"
-                />
-                <select
-                  name="category"
-                  value={adData.category}
-                  onChange={(e) =>
-                    setAdData({ ...adData, category: e.target.value })
-                  }
-                >
-                  <option value="festival">Festival</option>
-                  <option value="concert">Concert</option>
-                  <option value="spectacle">Spectacle</option>
-                  <option value="théâtre">Théâtre</option>
-                </select>
                 <input
                   type="text"
                   name="description"
@@ -224,21 +177,91 @@ function Dashboard() {
                   }
                   placeholder="Description du billet (exemple : place A21 premier rang)"
                   className="field"
-                />
+                  required/>
                 <button type="button" onClick={addTicket} className="buttonAd">
                   Ajouter un ticket
                 </button>
-                <button type="button" onClick={submitForm} className="buttonAd">
-                  Créer l'annonce
-                </button>
-              </form>
-              <h2>Tickets ajoutés:</h2>
+                <h2>Tickets ajoutés:</h2>
               <ul>
                 {adData.tickets &&
                   adData.tickets.map((ticket, index) => (
                     <li key={index}>{ticket.description}</li>
                   ))}
               </ul>
+              <h1>Créer une annonce</h1>           
+                <input
+                  type="text"
+                  name="name"
+                  value={adData.name}
+                  onChange={(e) => setAdData({ ...adData, name: e.target.value })}
+                  placeholder="Nom de l'annonce"
+                  className="field"
+                  required
+                />
+                      <input
+                  type="text"
+                  name="city"
+                  value={adData.city}
+                  onChange={(e) => setAdData({ ...adData, city: e.target.value })}
+                  placeholder="lieu"
+                  className="field"
+                  required
+                />
+
+                  <input
+                  type="text"
+                  name="photo"
+                  value={adData.photo}
+                  onChange={(e) => setAdData({ ...adData, photo: e.target.value })}
+                  placeholder="Mettez l'url d'une image de l'événement"
+                  className="field"
+                  required
+                />
+          
+                <input
+                  type="date"
+                  name="eventDate"
+                  value={adData.eventDate}
+                  onChange={(e) =>
+                    setAdData({ ...adData, eventDate: e.target.value })
+                  }
+                  placeholder="Date de l'événement"
+                  className="field"
+                  required
+                />
+                <select
+                  name="category"
+                  value={adData.category}
+                  onChange={(e) =>
+                    setAdData({ ...adData, category: e.target.value })
+                  }
+                >
+                  <option value="">Selectionnez une catégorie</option>
+                  <option value="festival">Festival</option>
+                  <option value="concert">Concert</option>
+                  <option value="spectacle">Spectacle</option>
+                  <option value="théâtre">Théâtre</option>
+                </select>
+                <select
+                  name="ticketQuantity"
+                  value={adData.ticketQuantity}
+                  onChange={(e) =>
+                  setAdData({ ...adData, ticketQuantity: e.target.value })
+                  }
+                   className="field"
+                  required
+                  >
+                  <option value="1">1 billet</option>
+                  <option value="2">2 billets</option>
+                  <option value="3">3 billets</option>
+                  <option value="4">4 billets</option>
+                  <option value="5">5 billets</option>
+                  </select>
+                <button type="button" onClick={submitForm} className="buttonAd">
+                  Créer l'annonce
+                </button>
+              </form>
+       
               {addStatus && <p className='done'>{addStatus}</p>}
             </div>
           </div>
