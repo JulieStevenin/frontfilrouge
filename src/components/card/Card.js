@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './card.css'
 
 function Card() {
@@ -6,7 +7,7 @@ function Card() {
     const [user, setUser] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/ad/all', {
+        fetch('http://localhost:8080/ad/all/false/false', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json', 
@@ -35,6 +36,7 @@ function Card() {
 
                 <div className='cardAll'>
                     {ads.map((ad) => (
+                        <Link to={`/ad/${ad.id}`} key={ad.id} className="card">
                         <div className="card" key={ad.id}>
                             <div className='pictureCard'>
                                 <img src={ad.photo} alt={ad.name} className='imgCard' />
@@ -44,6 +46,7 @@ function Card() {
                                 <p className='infoCard'> Vendeur : {ad.fname}</p>
                             </div>
                         </div>
+                        </Link>
                     ))}
                 </div>
    

@@ -1,0 +1,47 @@
+.mainAd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+
+
+.Ad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2vh;
+    background-color:#feffc3 ;
+    color: #350b59;
+    box-shadow: 5px 5px #350b59;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px
+}
+
+.titleAd{
+    text-transform: uppercase;
+    font-weight: 800;
+    
+}
+
+.photoAd{
+    width: 10vw;
+    border-radius: 10px;
+}
+
+.buttonAdDetails{
+    background-color: #350b59;
+    color: #FFF;
+    padding: 1vh;
+    margin: 1vh;
+    cursor: pointer;
+}
+
+.buttonAdDetails:hover{
+    background-color: #FFF;
+    color: #350b59;
+}
