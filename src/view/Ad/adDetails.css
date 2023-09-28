@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-}
+    font-family: sans-serif;
+   
+}   
 
 
 
@@ -13,13 +15,15 @@
     justify-content: center;
     align-items: center;
     gap:2vh;
-    background-color:#feffc3 ;
-    color: #350b59;
-    box-shadow: 5px 5px #350b59;
-    width: 30vw;
+    background: #d62451;
+    box-shadow: 5px 5px #feffc3;
+    border-radius: 10px;
+    width: 20vw;
+    height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20px
+    color: #FFF;
+    padding: 5vh;
 }
 
 .titleAd{
@@ -34,14 +38,45 @@
 }
 
 .buttonAdDetails{
-    background-color: #350b59;
-    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    color: #d62451;
     padding: 1vh;
     margin: 1vh;
     cursor: pointer;
+    height: 5vh;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .buttonAdDetails:hover{
-    background-color: #FFF;
-    color: #350b59;
+    background-color:#04045ac9;
+    color: #FFF;
+}
+
+.seller{
+    background-color: #000000;
+    padding: 1vh;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.titleAd{
+    text-transform: uppercase;
+    background-color: #000000;
+    padding: 1vh;   
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.priceAd{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 1vh;
+    background-color: #000000;
+    padding: 1vh;
+    border-radius: 10px;
 }

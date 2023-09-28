@@ -10,7 +10,7 @@ import Login from './view/login/Login';
 import { useEffect, useState } from 'react';
 import Footer from './components/footer/Footer';
 import AdDetails from './view/Ad/AdDetails';
-import Paiement from './view/paiement/Final';
+import Final from './view/paiement/Final';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('authToken'));
@@ -45,7 +45,7 @@ function App() {
           <Route path="/Account" element={<Account />} />
             <Route path="/OrderPayment" element={<OrderPayment/>} />
             <Route path="/ad/:adId" element={<AdDetails/>} />
-            <Route path="/commande/:id" element={<Paiement/>} />         
+            <Route path="/commande/:id" element={<Final/>} />         
         </Route>
       </Routes>
    

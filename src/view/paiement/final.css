@@ -1,9 +1,11 @@
 .mainBloc{
     display: flex;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 60vh;
+
+
 }
 
 .CommandeBloc{
@@ -11,9 +13,56 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #feffc3;
     color: black;
     width: 50vw;
-    height: 20vh;
+    height: 30vh;
+    border-radius: 10px;
+    padding: 2vh;
 
+}
+
+.PriceTotal{
+    background-color: #d62451;
+    width: fit-content;
+    padding: 1vh;
+    color: #FFF;
+    border-radius: 10px;
+}
+
+.formbuy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy{
+    background-color: #d62451;
+    padding: 1vh;
+    width: fit-content;
+    color: #FFF;
+    border-radius: 10px;
+    margin: 1vh;
+    cursor: pointer;
+}
+
+.buy:hover{
+    background-color:lightgreen;
+    color: #000;
+
+}
+           
+.CredCard{
+border: none;
+border-radius: 10px;
+background-color: #d62451;
+color: #FFF;
+height: 5vh;
+width: 30vw;
+}
+
+.logoBuy{
+    width: 5vw;
+    border-radius: 10px;
 }

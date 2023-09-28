@@ -2,7 +2,7 @@ import './final.css';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function Paiement() {
+function Final() {
   const { id } = useParams(); 
   const [cardNumber, setCardNumber] = useState("");
   const [isValidated, setIsValidated] = useState(false);
@@ -10,7 +10,7 @@ function Paiement() {
 
   useEffect(() => {
 
-    const getOrderUrl = `http://localhost:8080/order/${id}`;
+    const getOrderUrl = `http://localhost:8080/order/byticket/${id}`;
 
 
     fetch(getOrderUrl)
@@ -29,7 +29,7 @@ function Paiement() {
 
   const handleValidateOrder = () => {
 
-    fetch(`http://localhost:8080/order/validatesimple/${id}`, {
+    fetch(`http://localhost:8080/order/validatesimple/${order.id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -59,18 +59,21 @@ function Paiement() {
         <div className='mainBloc'>
           {order ? (
             <div className='CommandeBloc'>
-              <p>Prix total : {order.totalPrice}</p>
-              <form>
+              <p className='PriceTotal'>Prix total : {order.totalPrice} €</p>
+              <form className='formbuy'>
+                <h2>Saisissez votre numéro de carte de crédit</h2>
                 <input
+                className='CredCard'
                   type="text"
                   id="cardNumber"
                   value={cardNumber}
                   onChange={handleCardNumberChange}
                 placeholder='numéro de carte bleu'/>
-                <button type="button" onClick={handleValidateOrder}>
+                <div className='buy' onClick={handleValidateOrder}>
               Commander
-                </button>
+                </div>
               </form>
+              <img className='logoBuy' src="https://www.reussir-mon-ecommerce.fr/wp-content/uploads/2016/03/paypal-1.png"/>
             </div>
           ) : (
             <p>Chargement en cours...</p>
@@ -81,4 +84,4 @@ function Paiement() {
   );
 }
 
-export default Paiement;
+export default Final;

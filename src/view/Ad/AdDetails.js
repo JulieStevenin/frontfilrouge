@@ -29,22 +29,31 @@ function AdDetails() {
         console.error('Erreur lors de la récupération des données des tickets:', error);
       });
   }, [adId]);
+ 
+  const backgroundStyle = {
+    backgroundImage: `url(${adData.photo})`,
+    backgroundSize: '20%',
+    backgroundPosition: 'center',
+  
+  };
+
 
   return (
-    <div className="mainAd">
+    <div className="mainAd" style={backgroundStyle}> 
       <div className="Ad">
-        <h1 className='titleAd'>{adData.name}</h1>
+        <h1 className='titleAd'>{adData.name} </h1>
         <img className='photoAd' src={adData.photo} alt={adData.name} />
-        <p className='seller'>Vendeur : {adData.fname} {adData.lname} {adData.seller}</p>
+        <p className='seller'>Vendeur : {adData.fname} {adData.lname} </p>
+        <p>{adData.eventDate}</p>
         <p>Nombre de billets : {adData.ticketQuantity}</p>
         {tickets.map(ticket => (
             <div key={ticket.id}>
-              <p>Prix : {ticket.price}</p>
-              <p>Description : {ticket.description}</p>
+              <p className='priceAd'>Prix : {ticket.price} €</p>
+              <p> DESCRIPTION : {ticket.description} // ID Ticket : {ticket.id}</p>
               </div>
           ))}
         {tickets.length > 0 && (
-          <Link to={`/commande/${tickets[0].id}`}>Commander</Link>
+          <Link to={`/commande/${tickets[0].id}`}> <div className="buttonAdDetails">Commander</div> </Link>
         )}
       </div>
     </div>
@@ -52,8 +61,6 @@ function AdDetails() {
 }
 
 export default AdDetails;
-
-
 
 
 
