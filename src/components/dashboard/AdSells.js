@@ -44,7 +44,7 @@ function AdSells() {
         <div className="formDetails" key={ad.id}>
           <p className="inputDetails">{ad.name}</p>
           <p className="inputDetails">{ad.category}</p>
-          {ticket.map((ticket) => <p key={ticket.id}> Billet : {ticket.price} € Nombre {ad.ticketQuantity}</p>)}
+          {ticket.map((ticket) => <p key={ticket.id}> Prix : {ticket.price} € Nombre : {ad.ticketQuantity}</p>)}
           <img src={ad.photo} className='imgDetailSell' alt={`Image de ${ad.name}`} />
         </div>
       ))}
