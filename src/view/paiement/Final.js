@@ -1,6 +1,6 @@
 import './final.css';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import {Link, useParams } from 'react-router-dom';
 
 function Final() {
   const { id } = useParams(); 
@@ -54,7 +54,8 @@ function Final() {
   return (
     <div>
       {isValidated ? (
-        <p>L'OrderTicket a été validé avec succès!</p>
+        <p className='validationBuy'>Votre paiement de {order.totalPrice}€ a été validé avec succès !
+        <Link to="/"><div> Revenir à l'accueil</div></Link>  </p>
       ) : (
         <div className='mainBloc'>
           {order ? (

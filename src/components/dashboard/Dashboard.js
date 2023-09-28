@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './dashboard.css';
 import { Icon } from '@iconify/react';
 import { useEffect } from 'react';
+import AdSells from './AdSells.js';
 
 function Dashboard() {
   const [profil, setProfil] = useState(true);
@@ -149,7 +150,9 @@ function Dashboard() {
         {ventes && (
           <div className="onglet">
             <div className="textSec">
-              Safa retrouver annonce vente par mail : Ventes</div>
+              Vente
+             </div>
+             <AdSells/>
           </div>
         )}
         {annonces && (
@@ -242,21 +245,16 @@ function Dashboard() {
                   <option value="spectacle">Spectacle</option>
                   <option value="théâtre">Théâtre</option>
                 </select>
-                <select
-                  name="ticketQuantity"
-                  value={adData.ticketQuantity}
-                  onChange={(e) =>
-                  setAdData({ ...adData, ticketQuantity: e.target.value })
-                  }
-                   className="field"
-                  required
-                  >
-                  <option value="1">1 billet</option>
-                  <option value="2">2 billets</option>
-                  <option value="3">3 billets</option>
-                  <option value="4">4 billets</option>
-                  <option value="5">5 billets</option>
-                  </select>
+                <input
+                type="number"
+                name="ticketQuantity"
+                value={adData.ticketQuantity}
+                onChange={(e) => setAdData({ ...adData, ticketQuantity: e.target.value })}
+                className="field"
+                required
+                min="1"
+                max="5" 
+              />
                 <button type="button" onClick={submitForm} className="buttonAd">
                   Créer l'annonce
                 </button>

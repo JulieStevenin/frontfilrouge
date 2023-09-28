@@ -9,7 +9,7 @@ function AdDetails() {
   const [selectedTicketId, setSelectedTicketId] = useState(null);
 
   useEffect(() => {
-    // Récupération des données de l'annonce
+
     fetch(`http://localhost:8080/ad/${adId}`)
       .then(response => response.json())
       .then(data => {
@@ -19,7 +19,6 @@ function AdDetails() {
         console.error('Erreur lors de la récupération des données de l\'annonce:', error);
       });
 
-    // Récupération des tickets pour cette annonce
     fetch(`http://localhost:8080/tickets/byad/${adId}`)
       .then(response => response.json())
       .then(ticketsData => {
