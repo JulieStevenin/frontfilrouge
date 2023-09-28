@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import './formLogin.css';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import "./formLogin.css";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    mail: '',
-    password: ''
+    mail: "",
+    password: "",
   });
 
-  const [error, setError] = useState('');
-  const [token, setToken] = useState('');
+  const [error, setError] = useState("");
+  const [token, setToken] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -25,33 +25,32 @@ function LoginForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/auth', {
-        method: 'POST',
+      const response = await fetch("http://localhost:8080/auth", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error('Erreur lors de la requête');
+        throw new Error("Erreur lors de la requête");
       }
 
-      const authToken = await response.text(); // Récupérez la réponse en tant que texte
+      const authToken = await response.text();
 
       setToken(authToken);
-      localStorage.setItem('authToken', authToken);
+      localStorage.setItem("authToken", authToken);
 
-      navigate('/Account');
+      navigate("/Account");
     } catch (error) {
-      setError('Identifiants incorrects');
-      console.error('Erreur :', error);
+      setError("Identifiants incorrects");
+      console.error("Erreur :", error);
     }
   };
 
   return (
     <div className="login-container">
-
       <form className="formLogin" onSubmit={handleSubmit}>
         <input
           type="text"

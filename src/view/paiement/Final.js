@@ -1,25 +1,23 @@
-import './final.css';
-import { useState, useEffect } from 'react';
-import {Link, useParams } from 'react-router-dom';
+import "./final.css";
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
 function Final() {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const [cardNumber, setCardNumber] = useState("");
   const [isValidated, setIsValidated] = useState(false);
   const [order, setOrder] = useState(null);
 
   useEffect(() => {
-
     const getOrderUrl = `http://localhost:8080/order/byticket/${id}`;
 
-
     fetch(getOrderUrl)
-      .then(response => response.json())
-      .then(orderData => {
+      .then((response) => response.json())
+      .then((orderData) => {
         setOrder(orderData);
       })
-      .catch(error => {
-        console.error('Erreur lors de la requête GET :', error);
+      .catch((error) => {
+        console.error("Erreur lors de la requête GET :", error);
       });
   }, [id]);
 
@@ -28,53 +26,58 @@ function Final() {
   };
 
   const handleValidateOrder = () => {
-
     fetch(`http://localhost:8080/order/validatesimple/${order.id}`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ cardCode: cardNumber })
+      body: JSON.stringify({ cardCode: cardNumber }),
     })
-    .then(response => {
-      if (response.ok) {
-
-        setIsValidated(true);
-        console.log('La requête POST a réussi.');
-      } else {
-
-        console.error('La requête POST a échoué.');
-      }
-    })
-    .catch(error => {
-      console.error('Erreur lors de la requête POST :', error);
-    });
+      .then((response) => {
+        if (response.ok) {
+          setIsValidated(true);
+          console.log("La requête POST a réussi.");
+        } else {
+          console.error("La requête POST a échoué.");
+        }
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la requête POST :", error);
+      });
   };
 
   return (
     <div>
       {isValidated ? (
-        <p className='validationBuy'>Votre paiement de {order.totalPrice}€ a été validé avec succès !
-        <Link to="/"><div> Revenir à l'accueil</div></Link>  </p>
+        <p className="validationBuy">
+          Votre paiement de {order.totalPrice}€ a été validé avec succès !
+          <Link to="/">
+            <div> Revenir à l'accueil</div>
+          </Link>{" "}
+        </p>
       ) : (
-        <div className='mainBloc'>
+        <div className="mainBloc">
           {order ? (
-            <div className='CommandeBloc'>
-              <p className='PriceTotal'>Prix total : {order.totalPrice} €</p>
-              <form className='formbuy'>
+            <div className="CommandeBloc">
+              <p className="PriceTotal">Prix total : {order.totalPrice} €</p>
+              <form className="formbuy">
                 <h2>Saisissez votre numéro de carte de crédit</h2>
                 <input
-                className='CredCard'
+                  className="CredCard"
                   type="text"
                   id="cardNumber"
                   value={cardNumber}
                   onChange={handleCardNumberChange}
-                placeholder='numéro de carte bleu'/>
-                <div className='buy' onClick={handleValidateOrder}>
-              Commander
+                  placeholder="numéro de carte bleu"
+                />
+                <div className="buy" onClick={handleValidateOrder}>
+                  Commander
                 </div>
               </form>
-              <img className='logoBuy' src="https://www.reussir-mon-ecommerce.fr/wp-content/uploads/2016/03/paypal-1.png"/>
+              <img
+                className="logoBuy"
+                src="https://www.reussir-mon-ecommerce.fr/wp-content/uploads/2016/03/paypal-1.png"
+              />
             </div>
           ) : (
             <p>Chargement en cours...</p>

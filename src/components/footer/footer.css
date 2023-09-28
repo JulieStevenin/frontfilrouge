@@ -1,63 +1,61 @@
-.footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    width: 100vw;
-    background-color: #feffc3;
-    min-height: 40vh;
-    gap:2vh;
-   padding: 1vh;
-   font-size: clamp(15px,2vw,30px);
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #feffc3;
+  min-height: 40vh;
+  gap: 2vh;
+  padding: 1vh;
+  font-size: clamp(15px, 2vw, 30px);
 }
 
-.mainFooter{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #350b59;
-    width: 35vw;
-    border-radius: 10px;
-    height: 10vh;
-    
+.mainFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #350b59;
+  width: 35vw;
+  border-radius: 10px;
+  height: 10vh;
 }
 
-.btext{
-    margin: 0;
-    text-align: center;
-    color: #feffc3;
-    font-size: clamp(10px,2vw,15px);
-    border-radius: 5px;
+.btext {
+  margin: 0;
+  text-align: center;
+  color: #feffc3;
+  font-size: clamp(10px, 2vw, 15px);
+  border-radius: 5px;
 }
 
-.ftext{
-    margin: 0;
-    color: #FFF;
-    padding: 1vh;
-    text-align: center;
-    font-size: clamp(5px,2vw,10px);
-    border-radius: 5px;
+.ftext {
+  margin: 0;
+  color: #fff;
+  padding: 1vh;
+  text-align: center;
+  font-size: clamp(5px, 2vw, 10px);
+  border-radius: 5px;
 }
 
-.hFooter{
-    text-align: center;
-    color:#350b59;
-    margin:0;
-    padding: 0;
+.hFooter {
+  text-align: center;
+  color: #350b59;
+  margin: 0;
+  padding: 0;
 }
 
-.ftext2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    color:#350b59;
-    padding: 0;
-    text-align: center;
-    font-size: clamp(5px,2vw,10px);
-    border-radius: 5px;
-    font-weight: 600;
-    text-transform: uppercase;
-
+.ftext2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #350b59;
+  padding: 0;
+  text-align: center;
+  font-size: clamp(5px, 2vw, 10px);
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
 }

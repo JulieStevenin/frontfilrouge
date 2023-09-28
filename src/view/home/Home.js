@@ -4,21 +4,16 @@ import SectionApp from "../../components/section/SectionApp";
 import Testimonials from "../../components/testimonials/testimonials";
 import Review from "../../components/review/review";
 
-
-function Home(){
-
-
-    return(
-<>
-<Hero></Hero>
-<Testimonials></Testimonials>
-<Card></Card>
-<SectionApp></SectionApp>
-<Review></Review>
-</>
-
-    );
-
+function Home() {
+  return (
+    <>
+      <Hero></Hero>
+      <Testimonials></Testimonials>
+      <Card></Card>
+      <SectionApp></SectionApp>
+      <Review></Review>
+    </>
+  );
 }
 
 export default Home;

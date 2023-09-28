@@ -1,86 +1,82 @@
-.mainBloc{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 60vh;
-
-
+.mainBloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 60vh;
 }
 
-.CommandeBloc{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #feffc3;
-    color: black;
-    width: 50vw;
-    height: 30vh;
-    border-radius: 10px;
-    padding: 2vh;
-
+.CommandeBloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #feffc3;
+  color: black;
+  width: 50vw;
+  height: 30vh;
+  border-radius: 10px;
+  padding: 2vh;
 }
 
-.PriceTotal{
-    background-color: #d62451;
-    width: fit-content;
-    padding: 1vh;
-    color: #FFF;
-    border-radius: 10px;
+.PriceTotal {
+  background-color: #d62451;
+  width: fit-content;
+  padding: 1vh;
+  color: #fff;
+  border-radius: 10px;
 }
 
-.formbuy{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.formbuy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.buy{
-    background-color: #d62451;
-    padding: 1vh;
-    width: fit-content;
-    color: #FFF;
-    border-radius: 10px;
-    margin: 1vh;
-    cursor: pointer;
+.buy {
+  background-color: #d62451;
+  padding: 1vh;
+  width: fit-content;
+  color: #fff;
+  border-radius: 10px;
+  margin: 1vh;
+  cursor: pointer;
 }
 
-.buy:hover{
-    background-color:lightgreen;
-    color: #000;
-
-}
-           
-.CredCard{
-border: none;
-border-radius: 10px;
-background-color: #d62451;
-color: #FFF;
-height: 5vh;
-width: 30vw;
+.buy:hover {
+  background-color: lightgreen;
+  color: #000;
 }
 
-.logoBuy{
-    width: 5vw;
-    border-radius: 10px;
+.CredCard {
+  border: none;
+  border-radius: 10px;
+  background-color: #d62451;
+  color: #fff;
+  height: 5vh;
+  width: 30vw;
 }
 
-.validationBuy{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:#d62451;
-    box-shadow: 2px 2px 10px black;
-    color: #FFF;
-    margin-top: 10vh;
-    padding: 1vh;
-    border-radius: 10px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    height: fit-content;
-    font-size: large;
+.logoBuy {
+  width: 5vw;
+  border-radius: 10px;
+}
+
+.validationBuy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d62451;
+  box-shadow: 2px 2px 10px black;
+  color: #fff;
+  margin-top: 10vh;
+  padding: 1vh;
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  font-size: large;
 }

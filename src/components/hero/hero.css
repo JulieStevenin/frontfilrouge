@@ -1,108 +1,99 @@
-.mainHero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 65vh;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    gap:1vh;
-
+.mainHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  gap: 1vh;
 }
 
-
-
-.hero{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-width: 60%;
-min-height: 30vh;
-font-size: clamp(15px,5vw,30px);
-gap:2vh;
-text-align: center;
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  min-height: 30vh;
+  font-size: clamp(15px, 5vw, 30px);
+  gap: 2vh;
+  text-align: center;
 }
 
-.imgHero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    z-index: -1;
+.imgHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  z-index: -1;
 }
 
-.bghero{
-    background-color:#feffc3;
-    box-shadow: 5px 5px #350b59;
-    border-radius: 10px;
-    width: 60%;
-    object-fit: cover;
-  
+.bghero {
+  background-color: #feffc3;
+  box-shadow: 5px 5px #350b59;
+  border-radius: 10px;
+  width: 60%;
+  object-fit: cover;
 }
 
-.textHero{
-    margin: 0;
-    color: #FFF;
-    font-weight: 600;
+.textHero {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
 }
 
-.bubbleHero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #feffc3;
-    background-color: #350b59;
-    border-radius: 100px;
-    height: fit-content;
-    font-size: large;
-    width: 10vw;
-    padding: 1vh;
-    text-align: center;
-    font-size: clamp(5px,2vw,20px);;
-
+.bubbleHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #feffc3;
+  background-color: #350b59;
+  border-radius: 100px;
+  height: fit-content;
+  font-size: large;
+  width: 10vw;
+  padding: 1vh;
+  text-align: center;
+  font-size: clamp(5px, 2vw, 20px);
 }
 
-.promesse{
-    width: 100%;
-    margin: 0;
-    color: #feffc3;
-    font-weight: 900;
-    font-size: clamp(30px,4vw,60px);
+.promesse {
+  width: 100%;
+  margin: 0;
+  color: #feffc3;
+  font-weight: 900;
+  font-size: clamp(30px, 4vw, 60px);
 }
 
-
-.allButtonHero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:5vw;
+.allButtonHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
 }
 
-.buttonHero{
-    border: 2px solid #feffc3;
-    padding: 2vh;
-    text-align: center;
-    border-radius: 5vw;
-    color: #feffc3;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: fit-content;
-    cursor: pointer;
-    font-size: clamp(8px,3vw,20px);
+.buttonHero {
+  border: 2px solid #feffc3;
+  padding: 2vh;
+  text-align: center;
+  border-radius: 5vw;
+  color: #feffc3;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: fit-content;
+  cursor: pointer;
+  font-size: clamp(8px, 3vw, 20px);
 }
 
-.buttonHero:hover{
-    background-color: #04045ac9;
+.buttonHero:hover {
+  background-color: #04045ac9;
 }
 
-
-
-.blocHero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30vw;
-    
+.blocHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
 }

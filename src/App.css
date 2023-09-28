@@ -1,17 +1,15 @@
-a{
-    text-decoration: none;
-   
+a {
+  text-decoration: none;
 }
 
 .app-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  width: 100vw;
+}
 
-  }
-
-.footer{
-    margin-top: auto;
+.footer {
+  margin-top: auto;
 }

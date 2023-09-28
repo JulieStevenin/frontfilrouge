@@ -1,7 +1,6 @@
-
-import { useParams, useNavigate} from 'react-router-dom';
-import './orderConfirmation.css'
-import axios from 'axios';
+import { useParams, useNavigate } from "react-router-dom";
+import "./orderConfirmation.css";
+import axios from "axios";
 
 const ConfirmationPage = () => {
   const { id } = useParams();
@@ -12,16 +11,18 @@ const ConfirmationPage = () => {
         id,
       };
 
-      const response = await axios.post('http://localhost:8080/order/creationorder', orderTicket);
-
+      const response = await axios.post(
+        "http://localhost:8080/order/creationorder",
+        orderTicket
+      );
 
       if (response.status === 201) {
-        navigate.push(`/OrderPayment/${response.data.id}`); 
+        navigate.push(`/OrderPayment/${response.data.id}`);
 
-        console.error('Erreur lors de la création de la commande.');
+        console.error("Erreur lors de la création de la commande.");
       }
     } catch (error) {
-      console.error('Erreur lors de la création de la commande :', error);
+      console.error("Erreur lors de la création de la commande :", error);
     }
   };
 

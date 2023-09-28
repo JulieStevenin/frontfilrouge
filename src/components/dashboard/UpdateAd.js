@@ -1,50 +1,50 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link,useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 function UpdateAd() {
   const { adId } = useParams();
   const [adDetails, setAdDetails] = useState({
-    name: '',
-    eventDate: '',
-    city: '',
-    category: '',
-    photo: '',
+    name: "",
+    eventDate: "",
+    city: "",
+    category: "",
+    photo: "",
   });
   const [adData, setAdData] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
-  
     fetch(`http://localhost:8080/ad/${adId}`)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setAdDetails(data);
       })
-      .catch(error => {
-        console.error('Erreur lors de la récupération des données de l\'annonce:', error);
+      .catch((error) => {
+        console.error(
+          "Erreur lors de la récupération des données de l'annonce:",
+          error
+        );
       });
   }, [adId]);
 
   const handleUpdate = () => {
- 
     fetch(`http://localhost:8080/ad/${adId}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(adDetails),
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
-        
-          window.location.href = '/ventes'; // Remplacez '/ventes' par l'URL de l'annonce précédente
+          window.location.href = "/ventes"; // Remplacez '/ventes' par l'URL de l'annonce précédente
         } else {
-          console.error('Erreur lors de la mise à jour de l\'annonce');
+          console.error("Erreur lors de la mise à jour de l'annonce");
         }
       })
-      .catch(error => {
-        console.error('Erreur lors de la mise à jour de l\'annonce:', error);
+      .catch((error) => {
+        console.error("Erreur lors de la mise à jour de l'annonce:", error);
       });
-  }
+  };
   if (!adData) {
     return <div>Loading...</div>;
   }
@@ -62,7 +62,9 @@ function UpdateAd() {
         <input
           type="text"
           value={adDetails.eventDate}
-          onChange={(e) => setAdDetails({ ...adDetails, eventDate: e.target.value })}
+          onChange={(e) =>
+            setAdDetails({ ...adDetails, eventDate: e.target.value })
+          }
         />
         <label>Ville :</label>
         <input
@@ -74,35 +76,23 @@ function UpdateAd() {
         <input
           type="text"
           value={adDetails.category}
-          onChange={(e) => setAdDetails({ ...adDetails, category: e.target.value })}
+          onChange={(e) =>
+            setAdDetails({ ...adDetails, category: e.target.value })
+          }
         />
         <label>Photo :</label>
         <input
           type="text"
           value={adDetails.photo}
-          onChange={(e) => setAdDetails({ ...adDetails, photo: e.target.value })}
+          onChange={(e) =>
+            setAdDetails({ ...adDetails, photo: e.target.value })
+          }
         />
-         <button onClick={handleUpdate}>Enregistrer</button>
-         <Link to={`/update/${adId}`}>Retour aux détails de l'annonce</Link>
-   
+        <button onClick={handleUpdate}>Enregistrer</button>
+        <Link to={`/update/${adId}`}>Retour aux détails de l'annonce</Link>
       </form>
     </div>
   );
 }
 
 export default UpdateAd;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,39 +1,37 @@
-.mainRegister{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    width: 90vw;
-    margin: auto;   
-    padding: 1vh;
-    gap:2vh;
+.mainRegister {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 90vw;
+  margin: auto;
+  padding: 1vh;
+  gap: 2vh;
 }
 
-.titleRegister{
-    text-align: center;
-    font-size: clamp(25px,5vw,50px);
-    color:#feffc3;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-
+.titleRegister {
+  text-align: center;
+  font-size: clamp(25px, 5vw, 50px);
+  color: #feffc3;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
-.textRegister{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 15vw;
-    
+.textRegister {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 15vw;
 }
 
-.subRegister{
-text-align: center;
-    font-size: clamp(12px,3vw,20px);
-    margin: 0;
-    padding: 0;
-    color: #fFF;
-    font-weight: 600;
+.subRegister {
+  text-align: center;
+  font-size: clamp(12px, 3vw, 20px);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 600;
 }

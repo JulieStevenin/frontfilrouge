@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-
+import React, { useState } from "react";
+import axios from "axios";
 
 const OrderPayment = () => {
-  const [cardCode, setCardCode] = useState('');
-  const [securityCode, setSecurityCode] = useState('');
-  const [cardDate, setCardDate] = useState('');
+  const [cardCode, setCardCode] = useState("");
+  const [securityCode, setSecurityCode] = useState("");
+  const [cardDate, setCardDate] = useState("");
 
   const handleCardCodeChange = (e) => {
     setCardCode(e.target.value);
@@ -23,21 +22,21 @@ const OrderPayment = () => {
     e.preventDefault();
 
     const paymentData = {
-        cardCode,
-        securityCode,
-        cardDate,
-    }
-    try {
-        const response = await axios.post('http://localhost:8080/order/{id}/validation', paymentData);
-  
-        console.log('Réponse de l\'API :', response.data);
-  
-      } catch (error) {
-        console.error('Erreur lors de l\'appel à l\'API :', error);
-      }
+      cardCode,
+      securityCode,
+      cardDate,
     };
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/order/{id}/validation",
+        paymentData
+      );
 
-  
+      console.log("Réponse de l'API :", response.data);
+    } catch (error) {
+      console.error("Erreur lors de l'appel à l'API :", error);
+    }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
