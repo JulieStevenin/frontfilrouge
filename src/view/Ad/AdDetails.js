@@ -34,7 +34,6 @@ function AdDetails() {
     backgroundImage: `url(${adData.photo})`,
     backgroundSize: '20%',
     backgroundPosition: 'center',
-  
   };
 
 

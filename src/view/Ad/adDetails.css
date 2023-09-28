@@ -1,15 +1,18 @@
 .mainAd{
+
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
     font-family: sans-serif;
-   
+
+
 }   
 
 
 
 .Ad{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +27,7 @@
     margin-right: auto;
     color: #FFF;
     padding: 5vh;
+    
 }
 
 .titleAd{
